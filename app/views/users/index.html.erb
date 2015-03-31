@@ -1,0 +1,75 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <div class="container-fluid profile">
+
+    <%= render 'users/usersidemenu' %>
+      <div class="col-sm-4">
+        <div class="panel panel-default">
+          <div class="panel-heading"id="highlighted">Statistics</div>
+          <table class="table">
+            <tr>
+              <td>Last signed in</td>
+              <td> <%= current_user.last_sign_in_at %></td>
+            </tr>
+            <tr>
+              <td>Lessons</td>
+              <td> <%= current_user.lessons.count %></td>
+            </tr>
+            <tr>
+              <td>Files Uploaded</td>
+              <td> 10 </td>
+            </tr>
+            <tr>
+              <td>Rating</td>
+              <td> 8 </td>
+            </tr>
+          </table>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading " id="highlighted">Lesson Statistics</div>
+          <table class="table">
+            <tr>
+              <td>Math</td>
+              <td> <%= current_user.lessons.where(category_id: 1).count %></td>
+            </tr>
+            <tr>
+              <td>Physics</td>
+              <td> <%= current_user.lessons.where(category_id: 2).count %> </td>
+            </tr>
+            <tr>
+              <td>Chemistry</td>
+              <td> <%= current_user.lessons.where(category_id: 3).count %> </td>
+            </tr>
+            <tr>
+              <td>Other</td>
+              <td><%= current_user.lessons.where(category_id: 4).count %></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="panel panel-default">
+          <div class="panel-heading" id="highlighted">Comment by: User</div>
+          <div class="panel-body">
+            Great Lesson Bro 10/10
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading" id="highlighted">Comment by: User</div>
+          <div class="panel-body">
+            Ok Lesson Bro 8/10
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading" id="highlighted">Comment by: User</div>
+          <div class="panel-body">
+            Good Lesson Bro 10/10
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </body>
+</html>

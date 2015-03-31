@@ -1,0 +1,96 @@
+<html>
+  <head>
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  </head>
+  <body>
+    <div class="banner row text-center">
+      <div class="container">
+        <h1 class="text-center">(Picture)<br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin efficitur diam tristique fermentum fermentum.</h1>
+        <% if !current_user %>
+          <a href = "<%= new_user_user_path %>"> <button> <span>Register Now </span> </button></a>
+        <% end %>
+      </div>
+    </div>
+    <div class="recent row text-center">
+      <div class="container">
+        <div class="col-sm-4 recent_lessons">
+          <img src="https://cdn4.iconfinder.com/data/icons/school-education-1/256/Blackboard-512.png" /><br/>
+          <h3>Lorem ipsum dolor sit amet.(math)</h3>
+        </div>
+        <div class="col-sm-4 recent_lessons"><img src="https://cdn0.iconfinder.com/data/icons/seo-smart-pack/128/grey_new_seo2-17-512.png" /><br/>
+          <h3>Lorem ipsum dolor sit amet.(chemistry)</h3>
+        </div>
+        <div class="col-sm-4 recent_lessons"><img src="https://cdn2.iconfinder.com/data/icons/picons-basic-1/57/basic1-156_atom_nuclear-512.png" /><br/>
+          <h3>Lorem ipsum dolor sit amet.(physics)</h3>
+        </div>
+      </div>
+    </div>
+    <div class="row text-center tables">
+      <div class="container">
+        <div class="col-sm-6 rls">
+          <h2>Recent Lessons</h2>
+          <table class="table table-bordered text-center">
+            <th style="text-align: center;">Lesson</th>
+            <th style="text-align: center;">Author</th>
+            <tr>
+              <td><a href="#">Lesson 1</a></td>
+              <td>Arxhgos</td>
+            </tr>
+            <tr>
+              <td><a href="#">Lesson 1</a></td>
+              <td>Arxhgos</td>
+            </tr>
+            <tr>
+              <td><a href="#">Lesson 1</a></td>
+              <td>Arxhgos</td>
+            </tr>
+          </table>
+        </div>
+        <div class="col-sm-6 trl">
+          <h2>Top Rated Lessons</h2>
+          <table class="table table-bordered text-center">
+            <th style="text-align: center;">Lesson</th>
+            <th style="text-align: center;">Author</th>
+            <tr>
+              <td><a href="#">Lesson 1</a></td>
+              <td>Arxhgos</td>
+            </tr>
+            <tr>
+              <td><a href="#">Lesson 1</a></td>
+              <td>Arxhgos</td>
+            </tr>
+            <tr>
+              <td><a href="#">Lesson 1</a></td>
+              <td>Arxhgos</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="something row">
+      <div class="container">
+        <div class="col-sm-4 par">
+          <blockquote>
+            <p class="said">"Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Integer at lacus pulvinar libero dictum pellentesque vel venenatis arcu. Proin sed elementum dui, ut blandit risus. Mauris facilisis neque vitae venenatis tempor. Donec ut tortor nisl. Vestibulum nec lectus ex. Phasellus vel fermentum felis. In rhoncus felis sem, ac tincidunt mauris gravida eu. Donec mollis maximus volutpat. Ut ullamcorper mauris in  dapibus viverra."
+            </p>
+            <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+          </blockquote>
+        </div>
+        <div class="col-sm-4 par">
+          <blockquote>
+            <p class="said">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at lacus pulvinar libero dictum pellentesque vel venenatis arcu. Proin sed elementum dui, ut blandit risus. Mauris facilisis neque vitae venenatis tempor. Donec ut tortor nisl. Vestibulum nec lectus ex. Phasellus vel fermentum felis. In rhoncus felis sem, ac tincidunt mauris gravida eu. Donec mollis maximus volutpat. Ut ullamcorper mauris in dapibus viverra."</p>
+            <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+          </blockquote>
+        </div>
+        <div class="col-sm-4 par">
+          <blockquote>
+            <p class="said">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at lacus pulvinar libero dictum pellentesque vel venenatis arcu. Proin sed elementum dui, ut blandit risus. Mauris facilisis neque vitae venenatis tempor. Donec ut tortor nisl. Vestibulum nec lectus ex. Phasellus vel fermentum felis. In rhoncus felis sem, ac tincidunt mauris gravida eu. Donec mollis maximus volutpat. Ut ullamcorper mauris in dapibus viverra."</p>
+            <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+<%= render 'layouts/admin/botmenu' %>
+  </div>
+  </body>
+</html>

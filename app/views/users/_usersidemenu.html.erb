@@ -1,0 +1,22 @@
+      <div class="row usermenu">
+        <div class="col-sm-4" style="  ">
+          <h5>Your profile</h5>
+          <ul class="list-unstyled" style="  border-top: 1px solid lightgray;  line-height: 36px;">
+            <!-- <li><a href="#">Options</a></li> -->
+            <li><a href="<%= user_user_path(current_user) %>">Account Settings</a></li>
+            <li><a href="#">Forgot your password</a></li>
+          </ul>
+          <h5>Manage Lessons</h5>
+          <ul class="list-unstyled" style="  border-top: 1px solid lightgray;  line-height: 36px;">
+            <li><a href="<%=  user_lessons_path %>">Your Lessons</a></li>
+            <li><a href="<%= new_user_lesson_path %>">New Lesson</a></li>
+          </ul>
+          <h5>Your Messages</h5>
+          <ul class="list-unstyled" style="  border-top: 1px solid lightgray;  line-height: 36px;">
+            <li><a href="<%= received_user_messages_path %>">Received</a>
+              <% if Message.where(read: false ).where(receiver_id: current_user.id).count > 0 %>
+              <span class="badge"><%= Message.where(read: false ).where(receiver_id: current_user.id).count %></span></li>
+              <% end %>
+            <li><a href="<%= sent_user_messages_path %>">Sent</a></li>
+          </ul>
+        </div>

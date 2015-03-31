@@ -1,0 +1,17 @@
+<div class="container-fluid profile">
+<%= render 'users/usersidemenu' %>
+<div class="col-sm-8">
+  <table class="table table-bordered messages">
+    <th>Subject</th>
+    <th>From</th>
+    <th> Action </th>
+  <% @messages.each do |message| %>
+    <tr>
+      <td> <%= message.title %> </td>
+      <td> <%= User.where(id: message.sender_id).first.email %> </td>
+      <td> <%= link_to "Read",user_message_path(message),class: "btn btn-primary" %> </td>
+    </tr>
+  <% end %>
+  </table>
+</div>
+</div>

@@ -1,0 +1,15 @@
+<h1>Messages List </h1>
+  <table class = "table table-bordered"  style="text-align:center">
+    <th style = "text-align:center">Title</th>
+    <th style = "text-align:center">Body</th>
+    <th style = "text-align:center">From</th>
+    <th colspan = 2 style = "text-align:center">Action</th>
+      <% @messages.each do |message| %>
+        <tr>
+          <td><%= message.title %></td>
+          <td><%= message.body %></td>
+          <td><%= User.where(id: message.sender_id).first.email %></td>
+          <td><%= link_to "Destroy",admin_message_path(message), method: :delete, :class => "btn btn-danger",data: { confirm: "You sure?" } %></td>
+        </tr>
+      <% end %>
+  </table>

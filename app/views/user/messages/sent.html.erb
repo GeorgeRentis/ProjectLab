@@ -1,0 +1,15 @@
+<div class="container-fluid profile">
+<%= render 'users/usersidemenu' %>
+<div class="col-sm-8">
+  <table class="table table-bordered messages">
+    <th>Subject</th>
+    <th>To</th>
+  <% @messages.each do |message| %>
+    <tr>
+      <td> <%= message.title %> </td>
+      <td> <%= User.where(id: message.receiver_id).first.email %> </td>
+    </tr>
+  <% end %>
+  </table>
+</div>
+</div>

@@ -1,0 +1,7 @@
+<% @messages.each do |m| %>
+  <% if m.receiver_id == current_user.id %>
+    <p class="well col-md-offset-5" style="margin-left:505px"><%= m.title %><br/><%= m.body %></p>
+  <% else%>
+    <p class="well" style="margin-right: 505px;"><%= m.title %><br/><%= m.body %></p>
+  <% end %>
+<% end %>

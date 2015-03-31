@@ -1,0 +1,9 @@
+<%= form_for ( [:admin,@rating] ) do |f| %>
+  <%= f.hidden_field  "user_id", current_user.id %>
+  <%= label_tag char.name ,nil,class: "control-label"%>
+  <%= fields_for :ratings do |rat| %>
+    <%= select_tag 'score[]', options_for_select((1..10),
+    char.try(:ratings).where(player_id: @admin_player.id).first.try(:score)),class: "form-control" %>
+  <% end %>
+  <%=submit_tag  "Submit",class: "btn btn-primary" %>
+<% end %>

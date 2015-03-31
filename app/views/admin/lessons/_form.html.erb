@@ -1,0 +1,34 @@
+<%= nested_form_for([:admin,@lesson]) do |f|  %>
+  <div class = "form-group">
+    <%= f.label :title,class: "control-label"%>
+    <%= f.text_field :title,class: "form-control" %>
+  </div>
+  <div class = "form-group">
+    <%= f.label :description,class: "control-label"%>
+    <%= f.text_area :description,class: "form-control" %>
+  </div>
+  <div class = "form-group">
+    <%= f.label :level,class: "control-label"%>
+    <%= f.text_field :level,class: "form-control" %>
+  </div>
+  <div class = "form-group">
+    <%= f.label :category_id,class: "control-label" %>
+    <%= f.select(:category_id, Category.all.collect {|c| [c.name, c.id]}, prompt: 'Select',class: "form-control") %>
+  </div>
+  <div class = "form-group">
+    <%= f.fields_for :uploads do |upload| %>
+      <%= upload.file_field :upload, class: "form-control" %>
+      <%= upload.link_to_remove "Remove this file", class: "btn btn-danger btn-xs" %>
+    <% end %>
+    <p><%= f.link_to_add "Add a new file", :uploads, class: "btn btn-primary btn-xs" %></p>
+  </div>
+  <div class = "form-group">
+    <%= f.fields_for :comments do |comment| %>
+      <%= comment.hidden_field :user_id, :value => current_user.id %>
+      <%= comment.text_area :comment, class: "form-control" %>
+      <%= comment.link_to_remove "Remove this comment", class: "btn btn-danger btn-xs" %>
+    <% end %>
+    <p><%= f.link_to_add "Add a new comment", :comments, class: "btn btn-primary btn-xs" %></p>
+  </div>
+  <%= f.submit class: "btn btn-success" %>
+<% end %>

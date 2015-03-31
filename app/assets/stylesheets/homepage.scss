@@ -1,0 +1,69 @@
+// Place all the styles related to the homepage controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.faq{
+  border:1px solid lightgray;
+  margin-top:25px;
+  margin-bottom:25px;
+}
+
+.about_us{
+  border:1px solid lightgray;
+  margin-top:25px;
+  margin-bottom:25px;
+}
+th{
+  text-align: center;
+}
+
+.sidemenu_admin{
+  margin-top: 25px
+}
+
+ul{
+  list-style: none;
+  padding: 0
+}
+
+.usermenu a{
+  color:black;
+}
+
+ul li a{
+  color: white;
+  text-decoration: none;
+}
+
+
+
+.con ul li{
+  display:inherit
+}
+
+
+#highlighted{
+  color: white;
+  background-color: #545994;
+}
+
+.profile{
+  margin-top:25px;
+}
+address{
+  line-height: 27px;
+}
+
+blockquote{
+  background: lavender;
+  border: 1px;
+  border-radius: 19px;
+  font-size: inherit;
+}
+
+body,html
+{
+  height: 100%;
+  margin: 0;
+}
