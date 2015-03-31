@@ -11,7 +11,7 @@
       <% @user = User.find(lesson.user_id) %>
 
         <tr>
-          <td><%= lesson.title %></td>
+          <td><%= link_to lesson.title,lesson_path(lesson) %></td>
           <td><%= Category.where(id: lesson.category_id).first.name %></td>
           <td><%= lesson.level %></td>
                 <% if lesson.lesson_ratings.count > 0 %>

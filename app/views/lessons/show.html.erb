@@ -1,2 +1,7 @@
-<h1>Lessons#show</h1>
-<p>Find me in app/views/lessons/show.html.erb</p>
+
+<strong>Title:</strong><%= @lesson.first.title %> <br/>
+<strong>Description:</strong><%= @lesson.first.description %><br/>
+<strong>Category:</strong><%= Category.where(id: @lesson.first.category_id).name %><br/>
+<strong>Level:</strong><%= @lesson.first.level %><br/>
+<strong>Teacher:</strong><%= User.where(id: @lesson.first.user_id).first.email %><br/>
+<%= render 'layouts/admin/botmenu' %>

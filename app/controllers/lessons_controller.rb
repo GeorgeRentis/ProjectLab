@@ -5,6 +5,7 @@ class LessonsController < ApplicationController
   end
 
   def show
+    @lesson = Lesson.where(slug: params[:id]);
   end
 
   def new
