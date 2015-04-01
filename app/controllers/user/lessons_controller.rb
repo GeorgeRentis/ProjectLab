@@ -1,5 +1,6 @@
 class User::LessonsController < ApplicationController
   before_action :find_lesson,only: [:edit,:update]
+
   def index
     @lessons = Lesson.where(user_id: current_user.id).all
   end

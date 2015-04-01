@@ -29,7 +29,6 @@
       <td><%= User.where(id: lesson.user_id).first.email %></td>
       <td><%= lesson.uploads.count %></td>
       <% if lesson.lesson_ratings.count > 0 %>
-
         <% @avg = 0 %>
         <% lesson.lesson_ratings.each do |rating| %>
           <% @avg = @avg + rating.avg %>

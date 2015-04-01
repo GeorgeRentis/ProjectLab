@@ -28,7 +28,6 @@ class Admin::LessonsController < Admin::AdminController
   end
 
   def update
-
     if @lesson.update(admin_lesson_params)
       flash[:success] = "Lesson Successfully edited"
       redirect_to admin_lessons_path

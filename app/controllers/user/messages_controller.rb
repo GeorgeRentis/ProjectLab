@@ -12,7 +12,6 @@ class User::MessagesController < ApplicationController
   end
 
   def show
-
     @message.read = true
     @message.save
   end

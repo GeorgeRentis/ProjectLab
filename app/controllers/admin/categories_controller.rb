@@ -13,23 +13,21 @@ class Admin::CategoriesController < Admin::AdminController
 
   def create
     @category = Category.new(admin_category_params)
-      if @category.save
-        flash[:success] = "Category Successfully added"
-        redirect_to admin_categories_path
-      else
-        flash[:danger] = "Cannot create."
-        render 'new'
-      end
+    if @category.save
+      flash[:success] = "Category Successfully added"
+      redirect_to admin_categories_path
+    else
+      flash[:danger] = "Cannot create."
+      render 'new'
+    end
   end
 
   def edit
   end
 
   def update
-
     if @category.update(admin_category_params)
       flash[:success] = "Category Successfully edited"
-
       redirect_to admin_categories_path
     else
       flash[:danger] = "Cannot edit."
@@ -55,4 +53,5 @@ class Admin::CategoriesController < Admin::AdminController
     def find_category
       @category = Category.find(params[:id])
     end
+
 end

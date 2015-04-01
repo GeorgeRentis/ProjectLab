@@ -1,5 +1,5 @@
 class User::UsersController < ApplicationController
-before_action :find_user,only: [:edit,:update,:show]
+  before_action :find_user,only: [:edit,:update,:show]
 
   def index
     @comments = current_user.lessons.last.try(:comments)
@@ -9,7 +9,6 @@ before_action :find_user,only: [:edit,:update,:show]
   end
 
   def create
-
     @user = User.new(user_params)
     if @user.save
       sign_in :user, @user

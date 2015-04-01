@@ -22,10 +22,6 @@ class ContactMessagesController < ApplicationController
     @contact_message = ContactMessage.find(params[:id])
   end
 
-
-
-
-
   def contact_message_params
     params[:contact_message].permit(:first_name,:last_name,:subject,:email,:message)
   end
