@@ -9,15 +9,15 @@
       <li><a href="<%= categories_index_path %>">Categories</a></li>
       <li><a href="<%= contact_us_path %>">Contact Us</a></li>
         <% if current_user && current_user.role_id == "admin" %>
-          <li> <%= link_to "Admin Panel",admin_root_path,style: "color:#fff" %> </li>
+          <li> <%= link_to "Admin Panel",admin_root_path%> </li>
         <% end %>
         <% if current_user %>
-          <li> <%= link_to "Your Profile",user_users_path,style: "color:#fff" %> </li>
+          <li> <%= link_to "Your Profile",user_users_path %> </li>
         <% end %>
       </ul>
     <ul class="nav navbar-nav pull-right">
       <% if current_user %>
-        <li><%= link_to "#{current_user.email} - Logout", destroy_user_session_path, :method => :delete ,style: "color: #fff"%></li>
+        <li><%= link_to "#{current_user.email} - Logout", destroy_user_session_path, :method => :delete %></li>
       <% else %>
         <li><a href="#">SIGN UP</a></li>
         <li><a href="<%= new_user_session_path %>">SIGN IN</a></li>

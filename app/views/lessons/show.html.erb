@@ -4,4 +4,14 @@
 <strong>Category:</strong><%= Category.where(id: @lesson.first.category_id).name %><br/>
 <strong>Level:</strong><%= @lesson.first.level %><br/>
 <strong>Teacher:</strong><%= User.where(id: @lesson.first.user_id).first.email %><br/>
+
+<% if @lesson.first.uploads.count >0 %>
+<strong>Files:</strong>
+<% @lesson.first.uploads.each do |lesson_uploads| %>
+
+  <%= link_to "File",lesson_uploads.upload.url %>
+
+
+<% end %>
+<% end %>
 <%= render 'layouts/admin/botmenu' %>

@@ -13,6 +13,9 @@
           </ul>
           <h5>Your Messages</h5>
           <ul class="list-unstyled" style="  border-top: 1px solid lightgray;  line-height: 36px;">
+            <% if current_user.role_id == "admin" %>
+              <li><%= link_to "Contact Messages" ,contact_messages_path %></li>
+            <% end %>
             <li><a href="<%= received_user_messages_path %>">Received</a>
               <% if Message.where(read: false ).where(receiver_id: current_user.id).count > 0 %>
               <span class="badge"><%= Message.where(read: false ).where(receiver_id: current_user.id).count %></span></li>

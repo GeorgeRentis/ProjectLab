@@ -18,9 +18,16 @@ class User::MessagesController < ApplicationController
   end
 
   def new
+    @message = Message.new
   end
 
   def create
+    @message = Message.new(message_params)
+    if @message.save
+      redirect_to root_path
+    else
+      redirect_to root_path
+    end
   end
 
   def edit
@@ -34,5 +41,9 @@ class User::MessagesController < ApplicationController
 
   def find_message
     @message = Message.find(params[:id])
+  end
+
+  def message_params
+    params[:message].permit(:title,:body,:receiver_id,:sender_id)
   end
 end

@@ -1,0 +1,17 @@
+<div class="container-fluid profile">
+    <%= render 'users/usersidemenu' %>
+    <div class="col-sm-8">
+    <table class="table table-bordered ">
+      <th>Subject</th>
+      <th>Message</th>
+      <th>Action</th>
+      <% @contact_messages.each do |contact_message| %>
+        <tr>
+          <td><%= contact_message.subject %></td>
+          <td><%= contact_message.message %></td>
+          <td><%= link_to "Read",contact_message_path(contact_message),class: "btn btn-primary" %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

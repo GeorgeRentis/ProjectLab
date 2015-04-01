@@ -17,12 +17,14 @@
       <td><%= user.last_name %></td>
       <% if user.lessons.count > 0 %>
         <% user.lessons.each do |l| %>
+          <% if l.lesson_ratings.count >0 %>
           <% @lavg = 0 %>
           <% l.lesson_ratings.each do |r| %>
             <% @lavg = @lavg + r.avg %>
           <% end %>
           <% @lessonavg = 0 %>
           <% @lessonavg = @lavg / l.lesson_ratings.count %>
+          <% end %>
           <% @lessonsaverage = @lessonsaverage + @lessonavg %>
         <% end %>
         <td><%= @lessonsaverage / user.lessons.count %></td>

@@ -10,6 +10,7 @@
           <td><%= message.body %></td>
           <td><%= User.where(id: message.sender_id).first.email %></td>
           <td><%= link_to "Destroy",admin_message_path(message), method: :delete, :class => "btn btn-danger",data: { confirm: "You sure?" } %></td>
+
         </tr>
       <% end %>
   </table>

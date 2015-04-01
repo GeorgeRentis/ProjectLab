@@ -1,38 +1,32 @@
 <div class="row">
   <div class="container" style="margin-top:25px;margin-bottom:25px">
-     <table class="table table-striped" style="text-align:center;border:1px solid lightgray">
-              <th>Lesson Name</th>
-        <th>Category Name </th>
-        <th>Lesson Level </th>
-        <th>Lesson Rating</th>
-        <th>Teacher</th>
-        <th>Teacher email</th>
-    <% @lessons.each do |lesson| %>
-      <% @user = User.find(lesson.user_id) %>
-
+    <table class="table table-striped" style="text-align:center;border:1px solid lightgray">
+      <th>Lesson Name</th>
+      <th>Category Name </th>
+      <th>Lesson Level </th>
+      <th>Lesson Rating</th>
+      <th>Teacher</th>
+      <th>Teacher email</th>
+      <% @lessons.each do |lesson| %>
+        <% @user = User.find(lesson.user_id) %>
         <tr>
           <td><%= link_to lesson.title,lesson_path(lesson) %></td>
           <td><%= Category.where(id: lesson.category_id).first.name %></td>
           <td><%= lesson.level %></td>
-                <% if lesson.lesson_ratings.count > 0 %>
-
-        <% @avg = 0 %>
-        <% lesson.lesson_ratings.each do |rating| %>
-          <% @avg = @avg + rating.avg %>
-        <% end %>
-      <td><%= @avg/lesson.lesson_ratings.count %></td>
-      <% else %>
-      <td> No Rating </td>
+            <% if lesson.lesson_ratings.count > 0 %>
+              <% @avg = 0 %>
+              <% lesson.lesson_ratings.each do |rating| %>
+                <% @avg = @avg + rating.avg %>
+              <% end %>
+              <td><%= @avg/lesson.lesson_ratings.count %></td>
+            <% else %>
+              <td> No Rating </td>
+            <% end %>
+            <td><%= link_to @user.first_name + @user.last_name,user_user_path(@user) %></td>
+            <td><%= @user.email %></td>
+        </tr>
       <% end %>
-
-      <td><%= @user.first_name + @user.last_name%></td>
-
-      <td><%= @user.email %></td>
-    </tr>
-
-
-    <% end %>
- </table>
-</div>
+    </table>
   </div>
+</div>
 <%= render 'layouts/admin/botmenu' %>

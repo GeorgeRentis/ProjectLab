@@ -1,0 +1,43 @@
+  <div class="row">
+    <%= form_for ([@contact_message]),:html =>{:class => "col-sm-6",:style =>"margin-top: 25px;margin-bottom:25px" } do |f| %>
+  <!-- <form style="  margin-top: 25px;margin-bottom:25px" class="col-sm-6"> -->
+    <div class="form-group ">
+      <%= f.label :first_name,class: "control-label" %>
+      <%= f.text_field :first_name,class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :last_name,class: "control-label" %>
+      <%= f.text_field :last_name,class: "form-control" %>
+    </div>
+    <div class="form-group ">
+      <%= f.label :subject,class: "control-label" %>
+      <%= f.text_field :subject,class: "form-control" %>
+    </div>
+    <div class="form-group ">
+      <%= f.label :email,class: "control-label" %>
+      <%= f.text_field :email,class: "form-control" %>
+    </div>
+    <div class="form-group ">
+      <%= f.label :message,class: "control-label" %>
+      <%= f.text_area :message,class: "form-control" %>
+    </div>
+      <%= f.submit class: "btn btn-primary" %>
+
+      <% end %>
+ <!--  </form> -->
+  <div class="col-sm-6 con" style="margin-top:25px">
+    <ul>
+      <li>
+        <address>
+          <strong>George</strong><br>
+          999 Test, Test 60<br>
+          San Test,TE 12345<br>
+          Phone:4584845848<br>
+          email:hello@hello.com
+        </address>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<%= render 'layouts/admin/botmenu' %>

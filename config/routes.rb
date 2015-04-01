@@ -2,13 +2,15 @@ Rails.application.routes.draw do
 
 
 
+
+resources :contact_messages
 resources :lessons
 
  get 'categories/index'
  get 'users/index'
 
 root to: "homepage#index"
-get 'contact_us', to: 'homepage#contact_us'
+get 'contact_us', to: 'contact_messages#new'
 get 'about_us', to: 'homepage#about_us'
 get 'faq', to: 'homepage#faq'
 get 'privacy_policy', to: 'homepage#privacy_policy'
