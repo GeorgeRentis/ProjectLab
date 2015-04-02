@@ -1,9 +1,9 @@
 <h1>Messages List </h1>
   <table class = "table table-bordered"  style="text-align:center">
-    <th style = "text-align:center">Title</th>
-    <th style = "text-align:center">Body</th>
-    <th style = "text-align:center">From</th>
-    <th colspan = 2 style = "text-align:center">Action</th>
+    <th id="th">Title</th>
+    <th id="th">Body</th>
+    <th id="th">From</th>
+    <th colspan = 2 id="th">Action</th>
       <% @messages.each do |message| %>
         <tr>
           <td><%= message.title %></td>

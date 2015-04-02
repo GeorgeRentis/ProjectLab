@@ -1,8 +1,8 @@
 <h2> Categories List </h2>
-<table class = "table table-bordered"  style="text-align:center">
-  <th style = "text-align:center">Name</th>
-  <th style = "text-align:center">No of Lessons</th>
-  <th colspan = 2 style = "text-align:center">Action</th>
+<table class = "table table-bordered"  >
+  <th id="th">Name</th>
+  <th id="th">No of Lessons</th>
+  <th colspan = 2 id="th">Action</th>
   <% @categories.each do |category| %>
     <tr>
       <td><%= category.name %></td>

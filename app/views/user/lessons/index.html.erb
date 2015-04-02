@@ -1,16 +1,16 @@
 <div class="container-fluid profile">
   <%= render 'users/usersidemenu' %>
   <div class="col-sm-8">
-    <table class="table table-bordered" style="text-align:center">
+    <table class="table table-bordered" id="center_table">
       <thead>
         <tr>
-          <th style="text-align:center" data-sort="string">Title</th>
-          <th style="text-align:center" >Description</th>
-          <th style="text-align:center" data-sort="string">Level</th>
-          <th style="text-align:center" data-sort="string">Category</th>
-          <th style="text-align:center">Teacher</th>
-          <th style="text-align:center">No of Uploads</th>
-          <th style="text-align:center">Action</th>
+          <th id="th" data-sort="string">Title</th>
+          <th id="th" >Description</th>
+          <th id="th" data-sort="string">Level</th>
+          <th id="th" data-sort="string">Category</th>
+          <th id="th">Teacher</th>
+          <th id="th">No of Uploads</th>
+          <th id="th">Action</th>
         </tr>
       </thead>
       <% @lessons.each do |lesson| %>

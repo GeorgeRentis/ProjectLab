@@ -34,6 +34,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do
   gem 'byebug'
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
   gem 'web-console', '~> 2.0'
   gem 'spring'
   gem 'pry'
@@ -42,6 +44,27 @@ group :development, :test do
   gem 'pry-stack_explorer'
   gem 'awesome_print'
 end
+
+
+
+group :test do
+  gem 'faker'
+  gem 'capybara'
+  gem 'guard-rspec'
+  gem 'launchy'
+end
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
