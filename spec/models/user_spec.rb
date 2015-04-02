@@ -12,8 +12,9 @@ describe User do
   it "has to have a first name" do
     FactoryGirl.build(:user,first_name: nil).should_not be_valid
   end
-   #  it "has invalid email(same email twice)" do
-   # FactoryGirl.build(:user)
-   #  FactoryGirl.build(:user,email: "email@email.com").should_not be_valid
-   #  end
+  it "has invalid email(same email twice)" do
+    FactoryGirl.create(:user)
+    FactoryGirl.build(:user,email: "email@email.com").should_not be_valid
+  end
+
 end

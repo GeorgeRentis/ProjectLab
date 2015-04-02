@@ -1,3 +1,4 @@
+<dib class="profile container">
 <% @messages.each do |m| %>
   <% if m.receiver_id == current_user.id %>
     <p class="well  conv_sender" ><%= m.title %><br/><%= m.body %></p>
@@ -5,3 +6,4 @@
     <p class="well conv_receiver"><%= m.title %><br/><%= m.body %></p>
   <% end %>
 <% end %>
+</div>
