@@ -1,12 +1,13 @@
 <div class="row">
+  <h2 style="text-align:center">Lesson List</h2>
   <div class="container" style="margin-top:25px;margin-bottom:25px">
     <table class="table table-striped" style="text-align:center;border:1px solid lightgray">
       <th>Lesson Name</th>
       <th>Category Name </th>
       <th>Lesson Level </th>
       <th>Lesson Rating</th>
-      <th>Teacher</th>
-      <th>Teacher email</th>
+      <th >Teacher</th>
+
       <% @lessons.each do |lesson| %>
         <% @user = User.find(lesson.user_id) %>
         <tr>
@@ -22,8 +23,8 @@
           <% else %>
             <td> No Rating </td>
           <% end %>
-          <td><%= link_to @user.first_name + @user.last_name,user_user_path(@user) %></td>
-          <td><%= @user.email %></td>
+          <td><%= link_to @user.first_name  + " " + @user.last_name,user_user_path(@user) %></td>
+
         </tr>
       <% end %>
     </table>

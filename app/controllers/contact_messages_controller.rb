@@ -20,6 +20,8 @@ class ContactMessagesController < ApplicationController
 
   def show
     @contact_message = ContactMessage.find(params[:id])
+    @contact_message.read = true
+    @contact_message.save
   end
 
   def contact_message_params
