@@ -3,6 +3,9 @@ class UsersController < ApplicationController
   end
 
   def show
+
+    @user = User.where(slug:  params[:id])
+
   end
 
   def edit
