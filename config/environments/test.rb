@@ -22,7 +22,7 @@ Rails.application.configure do
 
   # Raise exceptions instead of rendering exception templates.
   config.action_dispatch.show_exceptions = false
-
+# Capybara::Screenshot.autosave_on_failure = false
   # Disable request forgery protection in test environment.
   config.action_controller.allow_forgery_protection = false
 
@@ -36,7 +36,7 @@ Rails.application.configure do
 
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
-
+  config.allow_concurrency = false
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 end

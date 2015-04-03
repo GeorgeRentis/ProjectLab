@@ -32,28 +32,61 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-group :development, :test do
-  gem 'byebug'
-  gem 'rspec-rails'
-  gem 'factory_girl_rails'
-  gem 'web-console', '~> 2.0'
-  gem 'spring'
-  gem 'pry'
-  gem 'pry-remote'
-  gem 'pry-rails'
-  gem 'pry-stack_explorer'
-  gem 'awesome_print'
-end
+ # group :development, :test do
+ #   gem 'byebug'
+ #   gem 'rspec-rails'
+ #   gem 'factory_girl_rails'
+ #   gem 'web-console', '~> 2.0'
+ #   gem 'spring'
+ #   gem 'pry'
+ #   gem 'pry-remote'
+ #   gem 'pry-rails'
+ #   gem 'pry-stack_explorer'
+ #   gem 'awesome_print'
+ # end
 
 
+
+ # group :test do
+ #   gem 'cucumber-rails',:require => false
+ #   gem 'capybara-screenshot',:group => :test
+ #   gem 'faker'
+ #   gem 'capybara'
+ #   gem 'guard-rspec'
+ #   gem 'launchy'
+ # end
 
 group :test do
-  gem 'faker'
-  gem 'capybara'
-  gem 'guard-rspec'
+  gem 'factory_girl_rails'
+  gem 'database_cleaner'
+  gem 'email_spec'
   gem 'launchy'
+  gem 'capybara'
+  gem 'shoulda-matchers'
+  gem 'capybara-webkit'
+  gem 'selenium-webdriver'
+  gem 'rspec-sidekiq', require: false
+  gem 'capybara-email'
+  gem 'poltergeist'
 end
 
+group :development, :test do
+  gem 'web-console', '~> 2.0'
+  gem 'spring'
+  gem 'did_you_mean'
+  gem 'awesome_print'
+  gem 'letter_opener'
+  gem 'faker'
+  gem 'binding_of_caller'
+  gem 'meta_request'
+  gem 'pry'
+  gem 'pry-rails'
+  gem 'pry-nav'
+  gem 'pry-doc'
+  gem 'pry-stack_explorer'
+  gem 'pry-rescue'
+  gem 'rspec-rails'
+end
 
 
 
