@@ -29,71 +29,57 @@ Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
 ActiveRecord::Migration.maintain_test_schema!
 
 RSpec.configure do |config|
-config.use_transactional_fixtures = false
-config.filter_run focus: true
-config.infer_base_class_for_anonymous_controllers = false
-config.order = "random"
-config.treat_symbols_as_metadata_keys_with_true_values = true
-config.run_all_when_everything_filtered = true
-config.expose_current_running_example_as :example
-config.raise_errors_for_deprecations!
+  config.use_transactional_fixtures = false
+  config.filter_run focus: true
+  config.infer_base_class_for_anonymous_controllers = false
+  config.order = "random"
+  config.treat_symbols_as_metadata_keys_with_true_values = true
+  config.run_all_when_everything_filtered = true
+  config.expose_current_running_example_as :example
+  config.raise_errors_for_deprecations!
 
 # Letter Opener test gem
 # config.include(MailerMacros)
 
 # A required workaround to get capybara working
-config.include Capybara::DSL
+  config.include Capybara::DSL
 
 #allow shorter factory commands
-config.include FactoryGirl::Syntax::Methods
+  config.include FactoryGirl::Syntax::Methods
 
 # Authentication specific helpers
 # config.include(AuthMacros)
 # config.include(OmniauthMacros)
 
 # Controller helpers
-config.include Devise::TestHelpers, type: :controller
+  config.include Devise::TestHelpers, type: :controller
 
-config.before(:suite) do
-DatabaseCleaner.strategy = :truncation
-DatabaseCleaner.clean_with :truncation
-end
+  config.before(:suite) do
+    DatabaseCleaner.strategy = :truncation
+    DatabaseCleaner.clean_with :truncation
+  end
 
-config.before(:all) do
-FactoryGirl.reload
-end
+  config.before(:all) do
+    FactoryGirl.reload
+  end
 
-config.before(:each) do
-DatabaseCleaner.start
-
-# tenants = ActiveRecord::Base.connection.exec_query("select nspname from pg_namespace where nspname like 'tenant%'")
-# tenants.rows.each do |r|
-# ActiveRecord::Base.connection.exec_query "drop schema #{r[0].to_s} cascade"
-# end
-
-# Sidekiq::Worker.clear_all
-# Sidekiq::Testing.fake!
-# Role.where(name: "administrator").first_or_create
-# Role.where(name: "company_admin").first_or_create
-# Role.where(name: "company_member").first_or_create
-
-# reset_email
-# DatabaseCleaner.strategy = :transaction
-end
+  config.before(:each) do
+    DatabaseCleaner.start
+  end
 
 #config.before(:each, js: true) do
 # DatabaseCleaner.strategy = :truncation, {pre_count: true}
 #end
 
-config.after(:each) do
+  config.after(:each) do
 # Apartment::Tenant.reset
-DatabaseCleaner.clean
-end
+    DatabaseCleaner.clean
+  end
 
 # Exclude slow tests except if the ENV["SLOW_SPECS"] is defined
-config.filter_run_excluding :slow unless ENV["SLOW_SPECS"]
+  config.filter_run_excluding :slow unless ENV["SLOW_SPECS"]
 
-config.infer_spec_type_from_file_location!
+  config.infer_spec_type_from_file_location!
 end
 
 # OmniAuth.configure do |config|

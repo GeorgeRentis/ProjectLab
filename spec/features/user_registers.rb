@@ -2,11 +2,6 @@
 require 'spec_helper'
 
 describe 'User registers'  do
-  # context 'Registration Complete' do
-  #   it 'visits homepage' do
-  #     visit root_path
-  #   end
-  # end
 
   # context 'create user' do
   #   it "creates a user",js: true do
@@ -21,7 +16,6 @@ describe 'User registers'  do
   #     expect(page).to have_content "(Picture)"
   #   end
   # end
-
   context 'admin log in' do
     it 'logs in as admin',js: true do
       user = FactoryGirl.create(:user,role_id: "admin")
@@ -65,11 +59,18 @@ describe 'User registers'  do
     end
   end
 
-
-
-
-
-
-
+  context 'send a contact us message' do
+    it "sends a contact us message",js: true  do
+      visit root_path
+      click_on "Contact Us"
+      fill_in 'contact_message_first_name',with: "George"
+      fill_in 'contact_message_last_name',with: "George"
+      fill_in 'contact_message_subject',with: "Question"
+      fill_in 'contact_message_email',with: "email@email.com"
+      fill_in 'contact_message_message',with: "lorem ipsum"
+      click_button 'Create Contact message'
+      sleep(5)
+    end
+  end
 
 end
