@@ -3,16 +3,23 @@
 }
 
 .finfo{
+
+  color:white;
   padding-top:35px;
   padding-bottom:35px;
 }
 
+.finfo h4{
+	margin-bottom: 0 0 15px 0;
+}
+
 .finfo li{
-  line-height: 27px;
+  font-size:12px;
+  line-height: 22px;
+  //border-bottom:1px dotted lavender;
 }
 .info{
   background:#545994;
-  text-align:center;
 }
 
 

@@ -1,7 +1,27 @@
 .tables{
-  background:#545994
+  background: lavender none repeat scroll 0% 0%;
 }
 .rls,.trl{
-  margin-top: 50px;
-  margin-bottom: 50px;
+margin-top: 5px;
+margin-bottom: 22px;
+}
+
+.tables table{
+
+	background-color: rgb(255, 255, 164);
+}
+.tables table tr{
+	border-bottom: 1px solid #DDD;
+}
+.tables h2{
+font-family: "Poiret One",cursive;
+color: rgb(84, 89, 148);
+	
+}
+
+.table-bordered > tbody > tr > td, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > td, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > thead > tr > th {
+    
+    border-left: 0px;
+    border-top: 0px;
+    border-bottom: 0px;
 }

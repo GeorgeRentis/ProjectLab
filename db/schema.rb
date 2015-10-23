@@ -202,17 +202,6 @@ ActiveRecord::Schema.define(version: 20150402071412) do
 
   add_index "rating_caches", ["cacheable_id", "cacheable_type"], name: "index_rating_caches_on_cacheable_id_and_cacheable_type", using: :btree
 
-  create_table "ratings", force: :cascade do |t|
-    t.string   "communication"
-    t.string   "quality"
-    t.string   "teaching"
-    t.string   "general_grade"
-    t.integer  "recepient_id"
-    t.integer  "rater_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-  end
-
   create_table "uploads", force: :cascade do |t|
     t.string   "upload"
     t.string   "uploadable_type"

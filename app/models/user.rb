@@ -12,6 +12,6 @@ class User < ActiveRecord::Base
   enum role_id: [ :admin, :user ]
   validates :first_name,:last_name,:email, presence: true
   validates :email,uniqueness: true
-  ratyrate_rater
+  
 
 end

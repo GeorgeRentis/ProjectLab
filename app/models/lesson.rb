@@ -10,5 +10,5 @@ class Lesson < ActiveRecord::Base
   accepts_nested_attributes_for :comments, allow_destroy: true
   accepts_nested_attributes_for :lesson_ratings, allow_destroy: true
   validates :title,:category,:description, presence: true
-  ratyrate_rateable 'Lesson'
+  
 end
