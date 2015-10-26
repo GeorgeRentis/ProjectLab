@@ -9,7 +9,7 @@
   </div>
   <div class = "form-group">
     <%= f.label :level,class: "control-label"%>
-    <%= f.text_field :level,class: "form-control" %>
+    <%= f.select(:level,options_for_select([["Amateur","Amateur"],["Intermmediate","Intermmediate"]]),class: "form-control") %>
   </div>
   <div class = "form-group">
     <%= f.label :category_id,class: "control-label" %>

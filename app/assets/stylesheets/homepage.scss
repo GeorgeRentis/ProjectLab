@@ -4,11 +4,35 @@
 
 
 .faq{
-
   margin-top:25px;
   margin-bottom:25px;
 }
-
+.privacy_policy{
+  margin-top:25px;
+  margin-bottom:25px;
+}
+.terms_and_conditions{
+  margin-top:25px;
+  margin-bottom:25px;
+}
+.about_us_title
+{ text-align:center;
+  margin-top:25px;
+  margin-bottom:25px;
+  font-family: "Poiret One",cursive;
+}
+.privacy_policy_title
+{ text-align:center;
+  margin-top:25px;
+  margin-bottom:25px;
+  font-family: "Poiret One",cursive;
+}
+.terms_and_conditions_title
+{ text-align:center;
+  margin-top:25px;
+  margin-bottom:25px;
+  font-family: "Poiret One",cursive;
+}
 .faqtitle {
   text-align:center;
   font-family: "Poiret One",cursive;
@@ -88,4 +112,5 @@ body,html
 {
   height: 100%;
   margin: 0;
+  width:100%;
 }

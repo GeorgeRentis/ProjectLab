@@ -1,13 +1,57 @@
+<table class="table table-bordered lesson_profile">
+	<tr>
+  	<td rowspan="6">
+    	<img src="https://cdn0.iconfinder.com/data/icons/customicondesign-office6-shadow/256/lessons.png">
+    </td>
+  </tr>
+  <tr class="lesson_row">
+  	<td>
+    	<strong>Title:</strong><%= @lesson.first.title %> 
+     </td>
+  </tr>
+  <tr class="lesson_row">
+  	<td>    	
+    	<strong>Description:</strong><%= @lesson.first.description %> 
+    </td>
+  </tr>
+  <tr class="lesson_row">
+  	<td>
+    	<strong>Category:</strong><%= Category.where(id: @lesson.first.category_id).name %>
+    </td>
+  </tr>
+  <tr class="lesson_row">
+  	<td>
+    	<strong>Level:</strong><%= @lesson.first.level %> 
+    </td>
+  </tr>
+  <tr class="lesson_row">
+  	<td>
+    	<strong>Teacher:</strong><%= User.where(id: @lesson.first.user_id).first.email %> 
+    </td>
+  </tr>
 
-<strong>Title:</strong><%= @lesson.first.title %> <br/>
-<strong>Description:</strong><%= @lesson.first.description %><br/>
-<strong>Category:</strong><%= Category.where(id: @lesson.first.category_id).name %><br/>
-<strong>Level:</strong><%= @lesson.first.level %><br/>
-<strong>Teacher:</strong><%= User.where(id: @lesson.first.user_id).first.email %><br/>
-<% if @lesson.first.uploads.count >0 %>
-  <strong>Files:</strong>
-  <% @lesson.first.uploads.each do |lesson_uploads| %>
-    <%= link_to "File",lesson_uploads.upload.url %>
-  <% end %>
-<% end %>
+      	
+        
+      
+   
+<!-- 
+    <% if @lesson.first.uploads.count >0 %>
+      <tr> -->
+<!--         <td>
+
+          <strong>Files:</strong>
+          <% @lesson.first.uploads.each do |lesson_uploads| %>
+            <%= link_to "File",lesson_uploads.upload.url %>
+          <% end %>
+        </td> -->
+<!--       </tr>
+      </td>
+    <% end %>
+
+
+
+    -->
+   
+ 
+</table>
 <%= render 'layouts/admin/botmenu' %>
