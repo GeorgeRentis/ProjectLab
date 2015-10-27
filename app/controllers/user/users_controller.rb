@@ -1,6 +1,6 @@
 class User::UsersController < ApplicationController
   
-
+before_action :find_user,only: [:edit,:update,:show]
   def index
     @comments = current_user.lessons.last.try(:comments)
   end
@@ -40,6 +40,10 @@ class User::UsersController < ApplicationController
   def user_params
     params[:user].permit(:first_name,:last_name,:email,:bio,:role_id,:password,:password_confirmation)
   end
-
+  def find_user
+    
+    @user = User.friendly.find(current_user.id)
+   
+  end
 
 end
