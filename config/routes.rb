@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :lessons
   get 'categories/index'
   get 'users/index'
+  get 'users/show'
   root to: "homepage#index"
   get 'contact_us', to: 'contact_messages#new'
   get 'about_us', to: 'homepage#about_us'
@@ -11,6 +12,11 @@ Rails.application.routes.draw do
   get 'privacy_policy', to: 'homepage#privacy_policy'
   get 'terms_and_conditions', to: 'homepage#term_anc_conditions'
 
+  resources :users do
+    member do
+      get :show
+    end
+  end
   resources :conversations do
     member do
       post :reply

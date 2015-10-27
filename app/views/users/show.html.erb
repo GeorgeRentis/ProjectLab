@@ -1,4 +1,50 @@
-<div class="row">
+<table class="table table-bordered lesson_profile">
+	<tr>
+  	<td rowspan="6">
+    	<img src="https://cdn0.iconfinder.com/data/icons/customicondesign-office6-shadow/256/lessons.png">
+    </td>
+  </tr>
+  <tr class="lesson_row">
+  	<td>
+    	<label class="control-label">First Name:<%= @user.first.first_name %></label><br/>
+     </td>
+  </tr>
+  <tr class="lesson_row">
+  	<td>    	
+    	 <label class="control-label">Last Name:<%= @user.first.last_name %></label><br/> 
+    </td>
+  </tr>
+  <tr class="lesson_row">
+  	<td>
+    	<label class="control-label">email:<%= @user.first.email %></label><br/>
+    </td>
+  </tr>
+  <tr class="lesson_row">
+  	<td>
+    	<label class="control-label">bio:<%= @user.first.bio %></label><br/>
+    </td>
+  </tr>
+  <tr class="lesson_row">
+  	<td>
+    	<%= link_to "Send Message",new_user_message_path(:email => current_user.email),class: "btn btn-primary" %>
+    </td>
+  </tr>
+
+</table>
+<%= render 'layouts/admin/botmenu' %>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="row">
   <div class = "col-sm-8">
     <label class="control-label">First Name:<%= @user.first.first_name %></label><br/>
     <label class="control-label">Last Name:<%= @user.first.last_name %></label><br/>
@@ -6,5 +52,4 @@
     <label class="control-label">bio:<%= @user.first.bio %></label><br/>
     <%= link_to "Send Message",new_user_message_path(:email => current_user.email),class: "btn btn-primary" %>
   </div>
-</div>
-<%= render "layouts/admin/botmenu" %>
+</div> -->

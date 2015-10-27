@@ -19,7 +19,7 @@
       <% if current_user %>
         <li><%= link_to "#{current_user.email} - Logout", destroy_user_session_path, :method => :delete %></li>
       <% else %>
-        <li><a href="#">SIGN UP</a></li>
+        <li><a href="<%= new_user_user_path %>">SIGN UP</a></li>
         <li><a href="<%= new_user_session_path %>">SIGN IN</a></li>
       <% end %>
     </ul>
