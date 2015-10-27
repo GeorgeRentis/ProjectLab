@@ -21,7 +21,7 @@ class User::LessonsController < ApplicationController
 
   def edit
   end
-
+  
   def update
     if @lesson.update(lesson_params)
       redirect_to user_lessons_path

@@ -8,6 +8,10 @@ class LessonsController < ApplicationController
     @lesson = Lesson.where(slug: params[:id]);
   end
 
+  def show_author
+    
+    @user = User.where(slug: params[:id])
+  end
   def new
   end
 

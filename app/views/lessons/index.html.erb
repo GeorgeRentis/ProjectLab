@@ -23,7 +23,7 @@
           <% else %>
             <td> No Rating </td>
           <% end %>
-          <td><%= link_to @user.first_name  + " " + @user.last_name,user_path(@user)%></td>
+          <td><%= link_to @user.first_name  + " " + @user.last_name, show_author_lesson_path(@user)%></td>
 
         </tr>
       <% end %>
