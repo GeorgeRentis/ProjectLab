@@ -2,28 +2,28 @@
   <div class="col-sm-4" >
     <h5>Your profile</h5>
     <ul class="list-unstyled" style="  border-top: 1px solid lightgray;  line-height: 36px;">
-      <li><a href="<%= edit_user_user_path(current_user) %>">Account Settings</a></li>
-      <li><a href="#">Forgot your password</a></li>
+      <li><a href="<%= edit_user_user_path(current_user) %>" class="profile_links">Account Settings</a></li>
+      <li><a href="#" class="profile_links">Forgot your password</a></li>
     </ul>
     <h5>Manage Lessons</h5>
     <ul class="list-unstyled" style="  border-top: 1px solid lightgray;  line-height: 36px;">
-      <li><a href="<%=  user_lessons_path %>">Your Lessons</a></li>
-      <li><a href="<%= new_user_lesson_path %>">New Lesson</a></li>
+      <li><a href="<%=  user_lessons_path %>" class="profile_links">Your Lessons</a></li>
+      <li><a href="<%= new_user_lesson_path %>" class="profile_links">New Lesson</a></li>
     </ul>
     <h5>Your Messages</h5>
     <ul class="list-unstyled" style="  border-top: 1px solid lightgray;  line-height: 36px;">
       <% if current_user.role_id == "admin" %>
-        <li><%= link_to "Contact Messages" ,contact_messages_path %>
+        <li><%= link_to "Contact Messages" ,contact_messages_path,:class=>"profile_links" %>
           <% if ContactMessage.where(read: false).count > 0 %>
             <span class="badge"><%= ContactMessage.where(read: false).count %></span>
           <% end %>
         </li>
       <% end %>
-      <li><a href="<%= received_user_messages_path %>">Received</a>
+      <li><a href="<%= received_user_messages_path %>" class="profile_links">Received</a>
         <% if Message.where(read: false ).where(receiver_id: current_user.id).count > 0 %>
           <span class="badge"><%= Message.where(read: false ).where(receiver_id: current_user.id).count %></span>
         <% end %>
       </li>
-      <li><a href="<%= sent_user_messages_path %>">Sent</a></li>
+      <li><a href="<%= sent_user_messages_path %>" class="profile_links">Sent</a></li>
     </ul>
   </div>

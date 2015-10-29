@@ -21,7 +21,7 @@
           <td><%= Category.where(id: lesson.category_id).first.name %></td>
           <td><%= User.where(id: lesson.user_id).first.email %></td>
           <td><%= lesson.uploads.count %></td>
-          <td><%= link_to "Edit",  edit_user_lesson_path(lesson), :class => "btn btn-primary" %></td>
+          <td><%= link_to "Edit",  edit_user_lesson_path(lesson), :class => "btn btn-primary profile_buttons" %></td>
         </tr>
       <% end %>
     </table>
