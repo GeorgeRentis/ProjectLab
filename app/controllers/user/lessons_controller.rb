@@ -31,7 +31,7 @@ class User::LessonsController < ApplicationController
   end
 
   def lesson_params
-    params[:lesson].permit(:title,:description,:category_id,:user_id,:level)
+    params[:lesson].permit(:title,:description,:category_id,:user_id,:level,uploads_attributes: [:id, :upload, :_destroy],comments_attributes: [:id, :comment,:user_id,:lesson_id, :_destroy])
   end
 
   def find_lesson
