@@ -42,9 +42,13 @@ class UploadUploader < CarrierWave::Uploader::Base
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
   def store_dir
-    "#{model.uploadable_type.downcase.pluralize}/#{model.uploadable_type.downcase}_#{model.id}"
+    
+    "#{model.uploadable_type.downcase.pluralize}/#{Lesson.find(model.uploadable_id).title
+}"
   end
-
+  def extension_white_list
+    %w(pdf doc htm html docx odt)
+  end
 
 
 end
