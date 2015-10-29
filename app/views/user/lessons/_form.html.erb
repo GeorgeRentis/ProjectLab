@@ -10,10 +10,10 @@
         <%= f.label :description,class: "control-label" %>
         <%= f.text_area :description,class: "form-control" %>
       </div>
-      <div class = "form-group">
-        <%= f.label :level,class: "control-label" %>
-        <%= f.text_field :level,class: "form-control" %>
-      </div>
+    <div class = "form-group">
+      <%= f.label :level,class: "control-label"%>
+      <%= f.select(:level,options_for_select([["Amateur","Amateur"],["Intermmediate","Intermmediate"],["Professional","Professional"],["World Class","World Class"],,["Master","Master"]]),class: "form-control") %>
+    </div>
       <div class = "form-group">
         <%= f.label :category_id,class: "control-label" %>
         <%= f.select(:category_id,Category.all.collect{|c| [c.name,c.id]},prompt: 'Select Category',class: "form-control") %>
