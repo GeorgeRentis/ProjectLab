@@ -49,8 +49,9 @@
         </div>
       </div>
       <div class="col-sm-4">
-        <% if @comments %>
-          <% @comments.each do |comment| %>
+      
+        <% if current_user.comments %>
+          <% current_user.comments.each do |comment| %>
             <div class="panel panel-default">
               <div class="panel-heading" id="highlighted">Comment by: <%= User.where(id: comment.user_id).first.email %></div>
               <div class="panel-body">

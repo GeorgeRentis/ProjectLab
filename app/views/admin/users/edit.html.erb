@@ -1,5 +1,14 @@
-<%= form_for([:admin,@user]) do |f|  %>
-
+<%= nested_form_for([:admin,@user]) do |f|  %>
+  <div class = "form-group">
+    <img class="avatar" src= <%= @user.images.first.upload.url(:homepage) %> />
+  </div>
+  <div class = "form-group">
+    <%= f.fields_for :images do |image| %>
+      <%= image.file_field :upload, class: "form-control" %>
+      <%= image.link_to_remove "Remove this image", class: "btn btn-danger btn-xs" %>
+    <% end %>
+    <p><%= f.link_to_add "Add a new image", :images, class: "btn btn-primary btn-xs" %></p>
+  </div>
   <div class = "form-group">
     <%= f.label :email,class: "control-label"%>
     <%= f.text_field :email,class: "form-control" %>
