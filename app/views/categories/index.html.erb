@@ -3,7 +3,7 @@
   <div class="container profile">
 
     <% @categories.each do |category| %>
-      <div class="col-sm-3 category" >
+      <div class="col-sm-4 col-md-3 category" >
         <img src=<%= category.image_url %> class="cat_image" %>
         <br/>
         <%= link_to category.name,lessons_path(:id => category.id),class: "btn btn-primary cat_name" %>
