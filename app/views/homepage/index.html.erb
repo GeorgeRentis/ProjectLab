@@ -37,18 +37,12 @@
           <table class="table table-bordered text-center" id="center_table">
             <th style="text-align: center;">Lesson</th>
             <th style="text-align: center;">Author</th>
+            <% @lessons_ratings.each do |ratings| %>
             <tr>
-              <td><a href="#">Introduction to criminology</a></td>
-              <td>Sherlock Holmes</td>
+              <td><a href="#"><%= Lesson.where(id: ratings.lesson_id).order(created_at: :desc).first.title%></a></td>
+              <td><%= User.where(id: Lesson.where(id:ratings.lesson_id).order(created_at: :desc).first.user_id).first.email %></td>
             </tr>
-            <tr>
-              <td><a href="#">Introduction to physics</a></td>
-              <td>John Watson</td>
-            </tr>
-            <tr>
-              <td><a href="#">Introduction to the universe</a></td>
-              <td>George Rentis</td>
-            </tr>
+            <% end %>
           </table>
         </div>
         <div class="col-sm-6 trl">

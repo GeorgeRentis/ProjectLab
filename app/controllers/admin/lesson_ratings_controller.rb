@@ -7,6 +7,7 @@ class Admin::LessonRatingsController < ApplicationController
 
   def new
     @lesson_rating = LessonRating.new
+
   end
 
   def create
@@ -15,6 +16,7 @@ class Admin::LessonRatingsController < ApplicationController
     if @lesson_rating.save
       redirect_to admin_root_path
     else
+      flash[:danger]="You already rated that lesson"
       redirect_to admin_root_path
     end
   end

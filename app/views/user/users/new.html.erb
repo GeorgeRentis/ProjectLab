@@ -1,5 +1,6 @@
-<%= nested_form_for([:user,@user]) do |f|  %>
+<%= nested_form_for([:user,@user],:html => {:class => 'form-horizontal col-md-4 col-md-offset-4'}) do |f|  %>
 
+ <h2 class="register_title">User registration page</h2>
   <div class = "form-group">
     <%= f.fields_for :images do |image| %>
       <%= image.file_field :upload, class: "form-control" %>
@@ -9,28 +10,32 @@
   </div>
 
   <div class = "form-group">
-    <%= f.label :first_name,class: "control-label"%>
-    <%= f.text_field :first_name,class: "form-control",id: "first_name" %>
+    <%= f.label :first_name,class: "control-label",for: "first_name"%>
+    <%= f.text_field :first_name,class: "form-control fields",id: "first_name" %>
   </div>
   <div class = "form-group">
     <%= f.label :last_name,class: "control-label"%>
-    <%= f.text_field :last_name,class: "form-control" %>
+    <%= f.text_field :last_name,class: "form-control fields" %>
   </div>
   <div class = "form-group">
     <%= f.label :email,class: "control-label"%>
-    <%= f.text_field :email,class: "form-control" %>
+    <%= f.text_field :email,class: "form-control fields" %>
   </div>
   <div class = "form-group">
     <%= f.label :bio,class: "control-label"%>
-    <%= f.text_area :bio,class: "form-control" %>
+    <%= f.text_area :bio,class: "form-control fields" %>
   </div>
   <div class = "form-group">
     <%= f.label :password,class: "control-label"%>
-    <%= f.password_field :password,class: "form-control" %>
+    <%= f.password_field :password,class: "form-control fields" %>
   </div>
   <div class = "form-group">
     <%= f.label :password_confirmation,class: "control-label"%>
-    <%= f.password_field :password_confirmation,class: "form-control" %>
+    <%= f.password_field :password_confirmation,class: "form-control fields" %>
   </div>
-  <%= f.submit class: "btn btn-success" %>
+  <div class = "form-group">
+
+  <%= f.submit class: "btn btn-success btn-md" %>
+  </div>
+ </div>
 <% end %>

@@ -48,12 +48,14 @@
      </tr>
       
     <% end %>
-<tr class="lesson_row">
-     <td>
-      <strong>Latest comment: </strong>
-      <%= @lesson.first.comments.last.comment %>
-  </div>
-</td>
+    <% if @lesson.first.comments.count > 0 %>
+      <tr class="lesson_row">
+        <td>
+          <strong>Latest comment: </strong>
+          <%= @lesson.first.comments.last.comment %>
+          <% end %>
+      </div>
+        </td>
      </tr>
  
    
