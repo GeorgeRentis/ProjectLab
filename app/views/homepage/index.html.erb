@@ -37,10 +37,10 @@
           <table class="table table-bordered text-center" id="center_table">
             <th style="text-align: center;">Lesson</th>
             <th style="text-align: center;">Author</th>
-            <% @lessons_ratings.each do |ratings| %>
+            <% @lessons.each do |lesson| %>
             <tr>
-              <td><a href="#"><%= Lesson.where(id: ratings.lesson_id).order(created_at: :desc).first.title%></a></td>
-              <td><%= User.where(id: Lesson.where(id:ratings.lesson_id).order(created_at: :desc).first.user_id).first.email %></td>
+              <td><a href=<% lesson_path(lesson) %>><%= lesson.title%></a></td>
+              <td><%= User.where(id: lesson.user_id).first.email %></td>
             </tr>
             <% end %>
           </table>

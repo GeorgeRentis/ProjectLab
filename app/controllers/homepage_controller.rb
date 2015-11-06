@@ -1,7 +1,7 @@
 class HomepageController < ApplicationController
 
   def index
-  	@lessons_ratings = LessonRating.order("avg desc").limit(3)
+  	@lessons = Lesson.order("created_at desc").limit(3)
   end
 
   def contact_us
