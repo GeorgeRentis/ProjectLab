@@ -1,7 +1,8 @@
 class LessonsController < ApplicationController
   def index
-    @lessons = Lesson.all
-    @lessons = Lesson.where(category_id: params[:id]) if !params[:id].blank?
+    @lessons = Lesson.search(params[:search])
+  
+
   end
 
   def show

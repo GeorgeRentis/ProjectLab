@@ -11,4 +11,12 @@ class Lesson < ActiveRecord::Base
   accepts_nested_attributes_for :lesson_ratings, allow_destroy: true
   validates :title,:category,:description, presence: true
   
+  def self.search(search)
+
+    if search
+      self.where('title LIKE ?',"%#{search}%")
+    else
+      self.all
+    end
+  end
 end
