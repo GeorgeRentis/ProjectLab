@@ -39,7 +39,7 @@
             <th style="text-align: center;">Author</th>
             <% @lessons.each do |lesson| %>
             <tr>
-              <td><a href=<% lesson_path(lesson) %>><%= lesson.title%></a></td>
+              <td><a href=<%= lesson_path(lesson) %>><%= lesson.title%></a></td>
               <td><%= User.where(id: lesson.user_id).first.email %></td>
             </tr>
             <% end %>
