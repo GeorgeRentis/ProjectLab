@@ -37,12 +37,14 @@ class ImageUploader < CarrierWave::Uploader::Base
   version :product_show do
     process resize_to_limit: [460, nil]
     #process :resize_to_width => [460, nil]
-
   end
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
   def store_dir
     "#{model.uploadable_type.downcase.pluralize}/#{model.uploadable_type.downcase}_#{model.id}"
+  end
+  def extension_white_list
+    %w(jpg jpeg gif png)
   end
 
 end

@@ -1,6 +1,6 @@
 <table class="table table-bordered lesson_profile">
 	<tr>
-  	<td rowspan="7">
+  	<td rowspan="9">
     	<img src="https://cdn0.iconfinder.com/data/icons/customicondesign-office6-shadow/256/lessons.png">
     </td>
   </tr>
@@ -16,7 +16,7 @@
   </tr>
   <tr class="lesson_row">
   	<td>
-    	<strong>Category:</strong><%= Category.where(id: @lesson.first.category_id).name %>
+    	<strong>Category:</strong><%= Category.where(id: @lesson.first.category_id).first.name %>
     </td>
   </tr>
   <tr class="lesson_row">
@@ -26,35 +26,34 @@
   </tr>
   <tr class="lesson_row">
   	<td>
-    	<strong>Teacher:</strong><%= User.where(id: @lesson.first.user_id).first.email %> <br>
-      
-
+    	<strong>Teacher:</strong><%= User.where(id: @lesson.first.user_id).first.email %> <br>            
     </td>
   </tr>
-
-      	
-        
-      
-   
- 
-    <% if @lesson.first.uploads.count >0 %>
+  <% if @lesson.first.uploads.count >0 %>
        <tr class="lesson_row">
      <td>
-
-          <strong>Files:</strong>
+          <strong>Files:</strong><br/>
           <% @lesson.first.uploads.each do |lesson_uploads| %>
           
-            <%= link_to lesson_uploads.upload.path.split("/").last,lesson_uploads.upload.url %>
+            <%= link_to lesson_uploads.upload.path.split("/").last,lesson_uploads.upload.url %><br/>
           <% end %>
         </td>
      </tr>
-      
+
+   
     <% end %>
+    <tr class="lesson_row">
+      <td>
+        <%= link_to "New Comment",  new_comment_path(:lesson_id => @lesson.first.id), :class => "btn btn-primary" %>
+
+      </td>
+    </tr>
     <% if @lesson.first.comments.count > 0 %>
       <tr class="lesson_row">
         <td>
           <strong>Latest comment: </strong>
-          <%= @lesson.first.comments.last.comment %>
+          <%= @lesson.first.comments.last.comment %><br/>
+          <%= link_to "View all Comments",comments_path(:lesson_id => @lesson.first.id) %>
           <% end %>
       </div>
         </td>

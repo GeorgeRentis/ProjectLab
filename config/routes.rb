@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   get 'terms_and_conditions', to: 'homepage#term_anc_conditions'
 
  
-  
+  resources :comments
   resources :conversations do
     member do
       post :reply
