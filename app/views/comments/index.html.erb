@@ -1,17 +1,14 @@
 <div class="row">
   <h2 style="text-align:center">Comments List</h2>
   <div class="container col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4">
-
     <% @comments.each do |comment| %>
-    <div class="panel panel-default ">
-          <div class="panel-heading" id="highlighted">Comment by: <%= User.where(id: comment.user_id).first.email %></div>
-          <div class="panel-body">
-           
-          
-      
-        <%=comment.comment%>
-      </div>
+      <div class="panel panel-default ">
+        <div class="panel-heading" id="highlighted">Comment by: <%= User.where(id: comment.user_id).first.email %>
         </div>
+        <div class="panel-body">         
+          <%=comment.comment%>
+        </div>
+      </div>
     <% end %>
   </div>
 </div>

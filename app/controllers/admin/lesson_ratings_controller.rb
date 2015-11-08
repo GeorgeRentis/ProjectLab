@@ -7,7 +7,6 @@ class Admin::LessonRatingsController < ApplicationController
 
   def new
     @lesson_rating = LessonRating.new
-
   end
 
   def create

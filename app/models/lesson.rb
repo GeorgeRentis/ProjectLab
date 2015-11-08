@@ -12,7 +12,6 @@ class Lesson < ActiveRecord::Base
   validates :title,:category,:description, presence: true
   
   def self.search(search)
-
     if search
       self.where('title LIKE ?',"%#{search}%")
     else

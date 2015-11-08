@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  get 'lesson_ratings/index'
+
+  get 'lesson_ratings/new'
+
+  get 'lesson_ratings/create'
+
   resources :contact_messages
   resources :lessons  do
     member do
@@ -17,7 +23,7 @@ Rails.application.routes.draw do
   get 'privacy_policy', to: 'homepage#privacy_policy'
   get 'terms_and_conditions', to: 'homepage#term_anc_conditions'
 
- 
+ resources :lesson_ratings
   resources :comments
   resources :conversations do
     member do

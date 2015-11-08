@@ -45,7 +45,7 @@
     <tr class="lesson_row">
       <td>
         <%= link_to "New Comment",  new_comment_path(:lesson_id => @lesson.first.id), :class => "btn btn-primary" %>
-
+        <%= link_to "New Rating",  new_lesson_rating_path(:lesson_id => @lesson.first.id), :class => "btn btn-primary" %>
       </td>
     </tr>
     <% if @lesson.first.comments.count > 0 %>
