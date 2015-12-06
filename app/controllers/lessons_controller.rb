@@ -1,6 +1,10 @@
 class LessonsController < ApplicationController
   def index
-    @lessons = Lesson.search(params[:search])
+    if params[:category_id]!=nil
+      @lessons = Lesson.where(category_id: params[:category_id])
+    else
+      @lessons = Lesson.search(params[:search])
+    end
   end
 
   def show

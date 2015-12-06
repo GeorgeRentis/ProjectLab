@@ -18,16 +18,18 @@
       <% if user.lessons.count > 0 %>
         <% user.lessons.each do |l| %>
           <% if l.lesson_ratings.count >0 %>
-          <% @lavg = 0 %>
-          <% l.lesson_ratings.each do |r| %>
-            <% @lavg = @lavg + r.avg %>
-          <% end %>
-          <% @lessonavg = 0 %>
-          <% @lessonavg = @lavg / l.lesson_ratings.count %>
+            <% @lavg = 0 %>
+            <% l.lesson_ratings.each do |r| %>
+              <% @lavg = @lavg + r.avg %>
+            <% end %>
+            <% @lessonavg = 0 %>
+            <% @lessonavg = @lavg / l.lesson_ratings.count %>
           <% end %>
           <% @lessonsaverage = @lessonsaverage + @lessonavg %>
         <% end %>
         <td><%= @lessonsaverage / user.lessons.count %></td>
+      <% else %>
+        <td>No Rating</td>
       <% end %>
       <td><%= user.email %></td>
       <td><%= user.bio %></td>
@@ -35,6 +37,8 @@
       <% if user.id!=current_user.id %>
         <td><%= link_to "Conversations",talks_admin_messages_path(:email => user.email) ,class: "btn btn-info"%></td>
         <td><%= link_to "Send a message",new_admin_message_path(:email => user.email) ,class: "btn btn-info"%></td>
+        <% else %>
+        <td colspan=2>You are the current user </td>
       <% end %>
       <td><%= link_to "Edit",  edit_admin_user_path(user), :class => "btn btn-primary" %></td>
       <td><%= link_to "Delete",admin_user_path(user), method: :delete, :class => "btn btn-danger",data: { confirm: "You sure?" } %></td>

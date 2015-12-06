@@ -12,8 +12,12 @@ class LessonRatingsController < ApplicationController
   	@lesson_rating.avg = (@lesson_rating.communication + @lesson_rating.quality + @lesson_rating.teaching + @lesson_rating.general_grade) / 4
 		@lesson = Lesson.where(id: @lesson_rating.lesson_id).first	
 		if @lesson_rating.save
+      
+      flash[:success] = "Rating Added"
 			redirect_to lesson_path(@lesson)
 		else
+
+      flash[:danger] = "You cannot rate this lesson"
 			redirect_to lesson_path(@lesson)
 		end
   end

@@ -3,9 +3,9 @@ FactoryGirl.define do
   factory :user do |f|
     f.email "email@email.com"
     f.first_name "George"
-    f.last_name "Rentatoras"
-    f.password "password"
-    f.password_confirmation "password"
+    f.last_name "Rentis"
+    f.password "password123"
+    f.password_confirmation "password123"
   end
 end
 

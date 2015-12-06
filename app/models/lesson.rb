@@ -9,11 +9,11 @@ class Lesson < ActiveRecord::Base
   accepts_nested_attributes_for :uploads, allow_destroy: true
   accepts_nested_attributes_for :comments, allow_destroy: true
   accepts_nested_attributes_for :lesson_ratings, allow_destroy: true
-  validates :title,:category,:description, presence: true
+  validates :title,:category,:description, presence: true,:case_sensitive => false
   
   def self.search(search)
     if search
-      self.where('title LIKE ?',"%#{search}%")
+      self.where('title ILIKE ?',"%#{search}%")
     else
       self.all
     end

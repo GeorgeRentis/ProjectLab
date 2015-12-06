@@ -1,4 +1,4 @@
-class Admin::LessonRatingsController < ApplicationController
+class Admin::LessonRatingsController < Admin::AdminController
   def index
   end
 
@@ -13,6 +13,7 @@ class Admin::LessonRatingsController < ApplicationController
     @lesson_rating = LessonRating.new(lesson_rating_params)
     @lesson_rating.avg = (@lesson_rating.communication + @lesson_rating.quality + @lesson_rating.teaching + @lesson_rating.general_grade) / 4
     if @lesson_rating.save
+      flash[:success]="You rated that lesson"
       redirect_to admin_root_path
     else
       flash[:danger]="You already rated that lesson"

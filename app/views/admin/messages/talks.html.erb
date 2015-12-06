@@ -1,9 +1,30 @@
 <dib class="profile container">
 <% @messages.each do |m| %>
   <% if m.receiver_id == current_user.id %>
-    <p class="well  conv_sender" ><%= m.title %><br/><%= m.body %></p>
+    
+
+    	<div class="panel panel-default conv_sender ">
+        <div class="panel-heading" id="highlighted">
+    <%= m.title %>
+    </div>
+    <div class="panel-body">
+    <%= m.body %>
+    </div>
+
+   
+    </div>
   <% else%>
-    <p class="well conv_receiver"><%= m.title %><br/><%= m.body %></p>
+    
+<div class="panel panel-default conv_receiver ">
+<div class="panel-heading" id="highlighted">
+    <%= m.title %>
+</div>
+<div class="panel-body">
+    <%= m.body %>
+    </div>
+
+    
+    </div>
   <% end %>
 <% end %>
 </div>
