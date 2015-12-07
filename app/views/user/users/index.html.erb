@@ -4,6 +4,10 @@
     <div class="col-sm-4">
       <div class="panel panel-default">
         <div class="panel-heading"id="highlighted">Statistics</div>
+          <% @uploads = 0 %>
+            <% current_user.lessons.each do |lesson| %>            
+              <% @uploads = @uploads + lesson.uploads.count %>
+            <% end %>
         <table class="table">
           <tr>
             <td>Last signed in</td>
@@ -15,39 +19,28 @@
           </tr>
           <tr>
             <td>Files Uploaded</td>
-            <% @uploads = 0 %>
-            <% current_user.lessons.each do |lesson| %>
-              <% @uploads = @uploads + lesson.uploads.count %>
-            <% end %>
-            <td><%= @uploads %>   </td>
+
+            <td><%= @uploads %></td>
           </tr>
         </table>
       </div>
       <div class="panel panel-default">
         <div class="panel-heading " id="highlighted">Lesson Statistics</div>
         <table class="table">
+        <% @categories = Category.all %>
+        <% @categories.each do |category| %>
           <tr>
-            <td>Math</td>
-            <td> <%= current_user.lessons.where(category_id: 1).count %></td>
+            <td><%= category.name %></td>
+            <td> <%= current_user.lessons.where(category_id: category.id).count %></td>
           </tr>
-          <tr>
-            <td>Physics</td>
-            <td> <%= current_user.lessons.where(category_id: 2).count %> </td>
-          </tr>
-          <tr>
-            <td>Chemistry</td>
-            <td> <%= current_user.lessons.where(category_id: 3).count %> </td>
-          </tr>
-          <tr>
-            <td>Other</td>
-            <td><%= current_user.lessons.where(category_id: 4).count %></td>
-          </tr>
+          <% end %>
         </table>
       </div>
     </div>
-    <div class="col-sm-4">      
-      <% if current_user.comments %>
-        <% current_user.comments.each do |comment| %>
+    <div class="col-sm-4"> 
+      <% @comments = current_user.comments.limit(5)   %>   
+      <% if @comments %>
+        <% @comments.each do |comment| %>
           <div class="panel panel-default">
             <div class="panel-heading" id="highlighted">Comment by: <%= User.where(id: comment.user_id).first.email %></div>
             <div class="panel-body">

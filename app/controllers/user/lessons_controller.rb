@@ -13,8 +13,10 @@ class User::LessonsController < ApplicationController
     @lesson = Lesson.new(lesson_params)
     @lesson.user_id = current_user.id
     if @lesson.save
+      flash[:success] = "Lesson Successfully created"
       redirect_to user_users_path
     else
+      flash[:danger] = "Cannot create lesson"
       redirect_to user_users_path
     end
   end
@@ -24,9 +26,11 @@ class User::LessonsController < ApplicationController
   
   def update
     if @lesson.update(lesson_params)
-      redirect_to user_lessons_path
+      flash[:success] = "Lesson Successfully updated"
+      redirect_to user_users_path
     else
-      redirect_to user_lessons_path
+      flash[:danger] = "Cannot update lesson"
+      redirect_to user_users_path
     end
   end
 

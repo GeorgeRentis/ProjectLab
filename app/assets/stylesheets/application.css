@@ -22,3 +22,10 @@
   text-align:center;
 }
 
+.nested_form_box{
+	margin-bottom:5px;
+}
+
+.alert{
+	margin-bottom: 0px;
+}

@@ -16,5 +16,4 @@ describe User do
     FactoryGirl.create(:user)
     FactoryGirl.build(:user,email: "email@email.com").should_not be_valid
   end
-
 end

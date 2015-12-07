@@ -1,4 +1,4 @@
-<%= form_for([:admin,@category]) do |f|  %>
+<%= form_for([:admin,@category],:html => {:class => 'admin_edit_category col-md-8 col-sm-8 '}) do |f|  %>
 
   <div class = "form-group">
     <%= f.label :name,class: "control-label"%>

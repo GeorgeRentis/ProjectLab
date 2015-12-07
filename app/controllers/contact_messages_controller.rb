@@ -8,8 +8,10 @@ class ContactMessagesController < ApplicationController
   def create
     @contact_message = ContactMessage.new(contact_message_params)
     if @contact_message.save
+      flash[:success] = "Message sent"
       redirect_to root_path
     else
+      flash[:danger] = "Cannot send message"
       redirect_to root_path
     end
   end

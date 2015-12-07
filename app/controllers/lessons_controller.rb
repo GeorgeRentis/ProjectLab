@@ -1,9 +1,14 @@
 class LessonsController < ApplicationController
   def index
-    if params[:category_id]!=nil
-      @lessons = Lesson.where(category_id: params[:category_id])
+    if current_user
+      if params[:category_id]!=nil
+        @lessons = Lesson.where(category_id: params[:category_id])
+      else
+        @lessons = Lesson.search(params[:search])
+      end
     else
-      @lessons = Lesson.search(params[:search])
+      flash[:danger] = "You have to register to access this area"
+      redirect_to root_path
     end
   end
 

@@ -19,11 +19,11 @@
             </tr>
             <tr>
               <td>Files Uploaded</td>
-              <td> 10 </td>
-            </tr>
-            <tr>
-              <td>Rating</td>
-              <td> 8 </td>
+              <%uploads = 0 %>
+              <% current_user.lessons.each do |lesson| %>
+                <% uploads = uploads + lesson.uploads.count %>
+              <% end %>
+              <td> <%= uploads %></td>
             </tr>
           </table>
         </div>

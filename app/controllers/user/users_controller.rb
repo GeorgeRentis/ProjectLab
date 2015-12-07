@@ -11,10 +11,12 @@ before_action :find_user,only: [:edit,:update,:show]
   def create
     @user = User.new(user_params)
     if @user.save
+      flash[:success] = "Welcome"
       sign_in :user, @user
       redirect_to root_path
     else
-      redirect_to root_path
+      flash[:danger] = "Cannot register"
+      redirect_to new_user_user_path
     end
   end
 
@@ -27,9 +29,11 @@ before_action :find_user,only: [:edit,:update,:show]
 
   def update
     if @user.update(user_params)
-      redirect_to user_user_path
+      flash[:success] = "Profile updated"
+      redirect_to user_users_path
     else
-      redirect_to user_user_path
+      flash[:danger] = "Cannot update profile"
+      redirect_to user_users_path
     end
   end
 

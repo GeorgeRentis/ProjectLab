@@ -23,8 +23,10 @@ class User::MessagesController < ApplicationController
   def create
     @message = Message.new(message_params)
     if @message.save
+      flash[:success] = "Message sent"
       redirect_to root_path
     else
+      flash[:danger] = "Cannot send message"
       redirect_to root_path
     end
   end

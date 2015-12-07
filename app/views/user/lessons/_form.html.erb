@@ -1,6 +1,6 @@
 <div class="container-fluid profile">
   <%= render 'users/usersidemenu' %>
-  <div class="col-sm-8">
+  <div class="col-sm-8 user_lesson_edit">
     <%= nested_form_for([ :user,@lesson]) do |f| %>
       <div class = "form-group" >
         <%= f.label :title,class: "control-label" %>
@@ -20,8 +20,8 @@
       </div>
         <div class = "form-group">
     <%= f.fields_for :uploads do |upload| %>
-      <%= upload.file_field :upload, class: "form-control" %>
-      <%= upload.link_to_remove "Remove this file", class: "btn btn-danger btn-xs" %>
+      <%= upload.file_field :upload, class: "nested_form_box" %>
+      <p><%= upload.link_to_remove "Remove this file", class: "btn btn-danger btn-xs" %><p>
     <% end %>
     <p><%= f.link_to_add "Add a new file", :uploads, class: "btn btn-primary btn-xs" %></p>
   </div>

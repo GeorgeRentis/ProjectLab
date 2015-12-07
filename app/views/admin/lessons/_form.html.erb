@@ -1,4 +1,4 @@
-<%= nested_form_for([:admin,@lesson]) do |f|  %>
+<%= nested_form_for([:admin,@lesson],:html => {:class => 'admin_edit_lesson col-md-8 col-sm-8 '})  do |f|  %>
   <div class = "form-group">
     <%= f.label :title,class: "control-label"%>
     <%= f.text_field :title,class: "form-control" %>
@@ -17,16 +17,16 @@
   </div>
   <div class = "form-group">
     <%= f.fields_for :uploads do |upload| %>
-      <%= upload.file_field :upload, class: "form-control" %>
-      <%= upload.link_to_remove "Remove this file", class: "btn btn-danger btn-xs" %>
+      <%= upload.file_field :upload, class: "nested_form_box" %>
+      <p><%= upload.link_to_remove "Remove this file", class: "btn btn-danger btn-xs" %></p>
     <% end %>
     <p><%= f.link_to_add "Add a new file", :uploads, class: "btn btn-primary btn-xs" %></p>
   </div>
   <div class = "form-group">
     <%= f.fields_for :comments do |comment| %>
       <%= comment.hidden_field :user_id, :value => current_user.id %>
-      <%= comment.text_area :comment, class: "form-control" %>
-      <%= comment.link_to_remove "Remove this comment", class: "btn btn-danger btn-xs" %>
+     <p> <%= comment.text_area :comment, class: "form-control" %></p>
+      <p><%= comment.link_to_remove "Remove this comment", class: "btn btn-danger btn-xs" %></p>
     <% end %>
     <p><%= f.link_to_add "Add a new comment", :comments, class: "btn btn-primary btn-xs" %></p>
   </div>
