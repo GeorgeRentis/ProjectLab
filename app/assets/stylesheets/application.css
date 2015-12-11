@@ -29,3 +29,13 @@
 .alert{
 	margin-bottom: 0px;
 }
+
+.alert-notice{
+	color: #3C763D;
+	background-color: #DFF0D8;
+}
+.heading{
+	margin: 0px 0px 10px;
+	text-decoration: underline;
+	text-align: center;
+}

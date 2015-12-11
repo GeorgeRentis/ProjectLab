@@ -6,7 +6,7 @@
 
     <div class="banner row text-center">
       <div class="container">
-        <h1 class="text-center welcome_message">Welcome to the greatest thesis of the earth.</br>
+        <h1 class="text-center welcome_message">Welcome to my thesis.</br>
         <% if !current_user %>
           <a href = "<%= new_user_user_path %>"> <button> <span>Register Now </span> </button></a>
         <% end %>
@@ -27,72 +27,32 @@
         <div class="col-sm-6 col-md-3 recent_lessons"><img src="https://cdn3.iconfinder.com/data/icons/forall/1062/conversation-256.png" /><br/>
           <h3>Instant communication between all the members</h3>
         </div>
-        <div class="col-sm-6 col-md-3 recent_lessons"><img src="https://cdn0.iconfinder.com/data/icons/flat-color-icons/504/paid-256.png" /><br/>
+        <div class="col-sm-6 col-md-3 recent_lessons"><img src="https://cdn4.iconfinder.com/data/icons/banking-and-finance/500/cash-money-wallet-128.png" /><br/>
           <h3>No fees!!</h3>
         </div>
       </div>
     </div>
-    <div class="row text-center tables">
-      <div class="container">
-        <div class="col-sm-6 rls">
-          <h2>Recent Lessons</h2>
-          <table class="table table-bordered text-center" id="center_table">
-            <th style="text-align: center;">Lesson</th>
-            <th style="text-align: center;">Author</th>
-            <% @lessons.each do |lesson| %>
-            <tr>
-              <td><a href=<%= lesson_path(lesson) %>><%= lesson.title%></a></td>
-              <td><%= User.where(id: lesson.user_id).first.email %></td>
-            </tr>
-            <% end %>
-          </table>
-        </div>
-        <div class="col-sm-6 trl">
-          <h2>Top Rated Lessons</h2>
-          <table class="table table-bordered text-center" id="center_table">
-            <th style="text-align: center;">Lesson</th>
-            <th style="text-align: center;">Author</th>
-            <th style="text-align: center;">Rating</th>
-            <tr>
-              <td><a href="#">Introduction to the universe</a></td>
-              <td>George Rentis</td>
-              <td>Infinite</td>
-            </tr>
-            <tr>
-              <td><a href="#">Introduction to horror writing</a></td>
-              <td>Stephen King
-              </td>
-              <td>10</td>
-            </tr>
-            <tr>
-              <td><a href="#">Introduction to Math</a></td>
-              <td>Pythagoras</td>
-              <td>10</td>
-            </tr>
-          </table>
-        </div>
-      </div>
-    </div>
+    
     <div class="something row">
       <div class="container">
       <h1 style='text-align: center; font-family: "Poiret One",cursive;'>They said about us</h1>
         <div class="col-sm-4 par">
           <blockquote>
-            <p class="said">"Very helpful website.The creator of this must be a genius i mean look at what he has accomplished..i got to Harvard thanks to this website and now i am working at Nasa and i discovered an element"
+            <p class="said">"Very helpful website. I intend to use it again and recommend it to all my friends. "
             </p>
-            <footer>Prince William<cite title="Source Title">  England's Prince</cite></footer>
+            <footer>John Doe<cite title="Source Title"> Harvard Graduate</cite></footer>
           </blockquote>
         </div>
         <div class="col-sm-4 par">
           <blockquote>
-            <p class="said">"Can i tell you something??I walked a lot of metra because i want to be a bat..one time i went to kindergarden i cried a little but i stayed..i think i wont be going there anytime soon.."</p>
-            <footer>Giorgakis<cite title="Source Title">  Rainbow</cite></footer>
+            <p class="said">"This website helped me through my exams. Found many useful things about math in here and the community is great"</p>
+            <footer>Jane Doe<cite title="Source Title">  Student</cite></footer>
           </blockquote>
         </div>
         <div class="col-sm-4 par">
           <blockquote>
-            <p class="said">"Hi my name is George Rentis enjoy my website...Ayto"</p>
-            <footer>George Rentis <cite title="Source Title">  George Rentis Biography</cite></footer>
+            <p class="said">"In retrospect this e-learning tool is great for everyone who is looking to study on the go"</p>
+            <footer>George Rentis <cite title="Source Title">  Rentis Times</cite></footer>
           </blockquote>
         </div>
       </div>

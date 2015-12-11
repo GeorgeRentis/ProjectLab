@@ -21,7 +21,7 @@ Rails.application.routes.draw do
   get 'about_us', to: 'homepage#about_us'
   get 'faq', to: 'homepage#faq'
   get 'privacy_policy', to: 'homepage#privacy_policy'
-  get 'terms_and_conditions', to: 'homepage#term_anc_conditions'
+  get 'terms_and_conditions', to: 'homepage#terms_and_conditions'
 
  resources :lesson_ratings
   resources :comments

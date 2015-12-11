@@ -1,6 +1,7 @@
 <div class="container-fluid profile">
   <%= render 'users/usersidemenu' %>
   <div class="col-sm-8 user_lesson_edit">
+  <h2 class="heading"> Create a Lesson </h2>
     <%= nested_form_for([ :user,@lesson]) do |f| %>
       <div class = "form-group" >
         <%= f.label :title,class: "control-label" %>

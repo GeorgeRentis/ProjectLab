@@ -8,7 +8,7 @@ class Admin::AdminController < ApplicationController
   private
     def check_admin
       unless current_user && current_user.role_id == "admin"
-        redirect_to admin_root_path
+        redirect_to root_path
       end
     end
 
