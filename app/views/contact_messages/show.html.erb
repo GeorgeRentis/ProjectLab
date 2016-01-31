@@ -1,8 +1,7 @@
 <div class="container-fluid profile">
   <%= render 'users/usersidemenu' %>
-  <%= @contact_message.first_name %> <br/>
-  <%= @contact_message.last_name %> <br/>
-  <%= @contact_message.email %> <br/>
-  <%= @contact_message.subject %> <br/>
-  <%= @contact_message.message %> <br/>
+  <div class="col-sm-8 well">
+	  <%= @contact_message.message %> <br/>
+  </div>
+</div>
 </div>
