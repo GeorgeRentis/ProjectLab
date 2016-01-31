@@ -1,20 +1,25 @@
 <%= nested_form_for([:admin,@lesson],:html => {:class => 'admin_edit_lesson col-md-8 col-sm-8 '})  do |f|  %>
+  <!-- Field for lesson title -->
   <div class = "form-group">
     <%= f.label :title,class: "control-label"%>
     <%= f.text_field :title,class: "form-control" %>
   </div>
+  <!-- Field for lesson description -->
   <div class = "form-group">
     <%= f.label :description,class: "control-label"%>
     <%= f.text_area :description,class: "form-control" %>
   </div>
+  <!-- Field for lesson level -->
   <div class = "form-group">
     <%= f.label :level,class: "control-label"%>
-    <%= f.select(:level,options_for_select([["Amateur","Amateur"],["Intermmediate","Intermmediate"],["Professional","Professional"],["World Class","World Class"],["Master","Master"]]),class: "form-control") %>
+    <%= f.select(:level,options_for_select([["Amateur","Amateur"],["Intermediate","Intermmediate"],["Professional","Professional"],["World Class","World Class"],["Master","Master"]]),class: "form-control") %>
   </div>
+  <!-- Field for lesson category -->
   <div class = "form-group">
     <%= f.label :category_id,class: "control-label" %>
     <%= f.select(:category_id, Category.all.collect {|c| [c.name, c.id]}, prompt: 'Select',class: "form-control") %>
   </div>
+  <!-- Field for lesson uploads -->
   <div class = "form-group">
     <%= f.fields_for :uploads do |upload| %>
       <%= upload.file_field :upload, class: "nested_form_box" %>
@@ -22,6 +27,7 @@
     <% end %>
     <p><%= f.link_to_add "Add a new file", :uploads, class: "btn btn-primary btn-xs" %></p>
   </div>
+  <!-- Field for lesson comments -->
   <div class = "form-group">
     <%= f.fields_for :comments do |comment| %>
       <%= comment.hidden_field :user_id, :value => current_user.id %>

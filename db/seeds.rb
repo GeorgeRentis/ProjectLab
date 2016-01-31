@@ -1,19 +1,15 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
-	Category.create(name: "Math")
-	Category.create(name: "Physics")
-	Category.create(name: "Chemistry")
-	Category.create(name: "Vocabulary and Writing")
-	Category.create(name: "Others")
-	Category.create(name: "Business and Economics")
-	Category.create(name: "Biology")
-	Category.create(name: "Programming")
-	Category.create(name: "Reading")
-	Category.create(name: "Languages")
-	Category.create(name: "Electronics")
-	Category.create(name: "SAE")
+
+	Category.create(name: "Biology", image_url:"https://cdn0.iconfinder.com/data/icons/medical_realvista/256/microscope.png")
+	Category.create(name: "Business and Economics", image_url:"https://cdn1.iconfinder.com/data/icons/business-and-finance-20/200/vector_65_14-256.png")
+	Category.create(name: "Chemistry",image_url:"https://cdn4.iconfinder.com/data/icons/SOPHISTIQUE/medical/png/256/laboratory.png")
+	Category.create(name: "Electronics",image_url:"https://cdn4.iconfinder.com/data/icons/stash/128/computer-chip-256.png")
+	Category.create(name: "Engineering",image_url:"https://cdn1.iconfinder.com/data/icons/technology-and-hardware-2/200/vector_66_14-256.png")
+	Category.create(name: "Languages", image_url:"https://cdn2.iconfinder.com/data/icons/metro-uinvert-dock/256/Windows_Live_Language_Setting.png")
+	Category.create(name: "Math",image_url:"https://cdn3.iconfinder.com/data/icons/flat-color-icons/504/calculator-256.png")
+	Category.create(name: "Physics", image_url:"https://cdn4.iconfinder.com/data/icons/SUPERVISTA/database/png/256/atom.png")
+	Category.create(name: "Programming", image_url:"https://cdn3.iconfinder.com/data/icons/luchesa-vol-9/128/Html-256.png")
+	Category.create(name: "Literature",image_url:"https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/256/literature.png")
+	Category.create(name: "Vocabulary and Writing",image_url:"https://cdn0.iconfinder.com/data/icons/simple-darkcon-1/99/book-256.png")
+	Category.create(name: "Others",image_url:"https://cdn4.iconfinder.com/data/icons/miu/22/circle_help_question-mark-256.png")
+	User.create(first_name:"George",last_name:"Rentis",email:"georent123@hotmail.com",password:"password",password_confirmation:"password",bio:"Admin",role_id:0)
+

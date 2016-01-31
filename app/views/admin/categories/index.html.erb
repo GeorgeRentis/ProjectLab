@@ -1,8 +1,10 @@
 <h2> Categories List </h2>
+<!-- Create table to display categories -->
 <table class = "table table-bordered"  >
   <th id="th">Name</th>
   <th id="th">No of Lessons</th>
   <th colspan = 2 id="th">Action</th>
+  <!-- Fetch information about the categories -->
   <% @categories.each do |category| %>
     <tr>
       <td><%= category.name %></td>

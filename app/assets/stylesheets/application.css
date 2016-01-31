@@ -39,3 +39,24 @@
 	text-decoration: underline;
 	text-align: center;
 }
+
+.test_wrapper{
+	min-height:100%;
+	margin:-240px auto 0
+}
+
+.test_footer{
+	height:240px;
+}
+
+.test_content{
+	padding-top: 240px;
+}
+
+.alert{
+	border-radius:0px;
+}
+
+.log_in_button{
+	margin-bottom:5px;
+}

@@ -3,7 +3,6 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
-gem 'nested_form'
 gem 'best_in_place'
 gem 'pg'
 gem 'puma'

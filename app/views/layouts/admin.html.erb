@@ -1,76 +1,38 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/stupidtable/0.0.1/stupidtable.js"></script>
-  <link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
-  <title>GeorgeProject</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
+  <head>
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stupidtable/0.0.1/stupidtable.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+    <title>GeorgeProject</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
   <body>
-    <%= render "layouts/admin/homemenu" %>
-    <div class = "container-fluid">
-      <% flash.each do |message_type, message| %>
-        <div class = "alert alert-<%= message_type %>" ><%= message %></div>
-      <% end %>
-      <div class = "row">
-        <div class = "col-sm-2 sidemenu_admin" >
-          <%= render "layouts/admin/sidemenu" %>
-        </div>
-        <div class = "col-md-10 lessontable" >
-            <div class="col-sm-6 admin_stats">
-      <div class="panel panel-default">
-        <div class="panel-heading"id="highlighted">Statistics</div>
-          <% @uploads = 0 %>
-            <% current_user.lessons.each do |lesson| %>            
-              <% @uploads = @uploads + lesson.uploads.count %>
-            <% end %>
-        <table class="table">
-          <tr>
-            <td>Last signed in</td>
-            <td> <%= current_user.current_sign_in_at %></td>
-          </tr>
-          <tr>
-            <td>Lessons</td>
-            <td> <%= current_user.lessons.count %></td>
-          </tr>
-          <tr>
-            <td>Files Uploaded</td>
-
-            <td><%= @uploads %></td>
-          </tr>
-        </table>
-      </div>
-      </div>
-      <div class="col-sm-6 admin_stats" >
-      <div class="panel panel-default">
-        <div class="panel-heading " id="highlighted">Lesson Statistics</div>
-        <table class="table">
-        <% @categories = Category.all %>
-        <% @categories.each do |category| %>
-          <tr>
-            <td><%= category.name %></td>
-            <td> <%= current_user.lessons.where(category_id: category.id).count %></td>
-          </tr>
-          <% end %>
-        </table>
-      </div>
-      </div>
-    </div>
+    <div class = "container-fluid test_wrapper">
+      <div class="test_content">
+        <%= render "layouts/admin/homemenu" %>
+        <% flash.each do |message_type, message| %>
+          <div class = "row alert alert-<%= message_type %>" ><%= message %></div>
+        <% end %>
+        <div class = "row">
+          <div class = "col-sm-2 sidemenu_admin">
+            <%= render "layouts/admin/sidemenu" %>
+          </div>
+<div class = "col-md-10 lessontable" >
           <%= yield %>
-          
         </div>
-        
-
+        </div>
       </div>
     </div>
-    <%= render 'layouts/admin/botmenu' %>
+    <div class="test_footer">
+      <%= render 'layouts/admin/botmenu' %>
+    </div>
   </body>
 </html>
 

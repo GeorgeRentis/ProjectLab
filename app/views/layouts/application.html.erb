@@ -14,14 +14,19 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div class=" container-fluid test_wrapper">
+
+  <div class="test_content">
   <%= render "layouts/admin/homemenu" %>
         <% flash.each do |message_type, message| %>
-        <div class = "alert alert-<%= message_type %>" ><%= message %></div>
+        <div class = "row alert alert-<%= message_type %>" ><%= message %></div>
       <% end %>
-  <div class = "container-fluid">
-
-  <%= yield %>
+    <%= yield %>
+  </div>
+</div>
+  <div class="test_footer">
   <%= render 'layouts/admin/botmenu' %>
   </div>
+  
 </body>
 </html>
