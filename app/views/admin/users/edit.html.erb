@@ -1,17 +1,19 @@
 <%= nested_form_for([:admin,@user],:html => {:class => 'profile_edit'}) do |f|  %>
+
   <% if @user.images.first != nil %>      
     <div class = "form-group">
-        <img class="avatar" src= <%= @user.images.first.upload.url(:homepage) %> />
-          <div class = "form-group">
-            <%= f.fields_for :images do |image| %>
-              <%= image.file_field :upload, class: "nested_form_box" %>
-              <p><%= image.link_to_remove "Remove this image", class: "btn btn-danger btn-xs" %></p>
-            <% end %>
-            <p><%= f.link_to_add "Add a new image", :images, class: "btn btn-primary btn-xs" %></p>
-          </div>
-        </div>
-      
+      <img class="avatar" src= <%= @user.images.first.upload.url(:homepage) %> />
+    </div>
+  <% end %>
+  <div class = "form-group">
+    <%= f.fields_for :images do |image| %>
+      <%= image.file_field :upload, class: "nested_form_box" %>
+      <p><%= image.link_to_remove "Remove this image", class: "btn btn-danger btn-xs" %></p>
     <% end %>
+    <p><%= f.link_to_add "Add a new image", :images, class: "btn btn-primary btn-xs" %></p>
+  </div>
+  
+  
   <div class = "form-group">
     <%= f.label :email,class: "control-label"%>
     <%= f.text_field :email,class: "form-control" %>

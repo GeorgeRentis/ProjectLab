@@ -1,8 +1,12 @@
 <table class="table table-bordered lesson_profile">
 	<tr>
   	<td rowspan=7>
+      <% if @user.images.first != nil %>
+    	 <img src= <%= @user.first.images.first.upload.url(:homepage) %> />
+      <% else %>
+        <img src= <%= @user.first.default_avatar %> />
+      <% end %>
 
-    	<img src= <%= @user.first.images.first.upload.url(:homepage) %> />
     </td>
   </tr>
   <tr class="lesson_row">

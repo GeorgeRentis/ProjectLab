@@ -1,39 +1,43 @@
-          
-            <div class="col-sm-6 admin_stats">
-              <div class="panel panel-default">
-                <div class="panel-heading"id="highlighted">Statistics</div>
-                <% @uploads = 0 %>
-                <% current_user.lessons.each do |lesson| %>          
-                  <% @uploads = @uploads + lesson.uploads.count %>
-                <% end %>
-                <table class="table">
-                  <tr>
-                    <td>Last signed in</td>
-                    <td> <%= current_user.current_sign_in_at %></td>
-                  </tr>
-                  <tr>
-                    <td>Lessons</td>
-                    <td> <%= current_user.lessons.count %></td>
-                  </tr>
-                  <tr>
-                    <td>Files Uploaded</td>
-                    <td><%= @uploads %></td>
-                  </tr>
-                </table>
-              </div>
-            </div>
-            <div class="col-sm-6 admin_stats" >
-              <div class="panel panel-default">
-                <div class="panel-heading " id="highlighted">Lesson Statistics</div>
-                <table class="table">
-                  <% @categories = Category.all %>
-                  <% @categories.each do |category| %>
-                    <tr>
-                      <td><%= category.name %></td>
-                      <td> <%= current_user.lessons.where(category_id: category.id).count %></td>
-                    </tr>
-                  <% end %>
-                </table>
-              </div>
-            </div>
+<div class="col-sm-6 admin_stats">
+  <div class="panel panel-default">
+    <div class="panel-heading"id="highlighted">
+      Statistics
+    </div>
+    <% @uploads = 0 %>
+    <% current_user.lessons.each do |lesson| %>          
+      <% @uploads = @uploads + lesson.uploads.count %>
+    <% end %>
+    <table class="table">
+      <tr>
+        <td>Last signed in</td>
+        <td> <%= current_user.current_sign_in_at %></td>
+      </tr>
+      <tr>
+        <td>Lessons</td>
+        <td> <%= current_user.lessons.count %></td>
+      </tr>
+      <tr>
+        <td>Files Uploaded</td>
+        <td><%= @uploads %></td>
+      </tr>
+    </table>
+  </div>
+</div>
+            
+<div class="col-sm-6 admin_stats" >
+  <div class="panel panel-default">
+    <div class="panel-heading " id="highlighted">
+    Lesson Statistics
+    </div>
+    <table class="table">
+      <% @categories = Category.all %>
+      <% @categories.each do |category| %>
+        <tr>
+          <td><%= category.name %></td>
+          <td> <%= current_user.lessons.where(category_id: category.id).count %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
           

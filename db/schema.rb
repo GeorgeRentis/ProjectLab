@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151211132004) do
+ActiveRecord::Schema.define(version: 20160207184320) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -234,12 +234,12 @@ ActiveRecord::Schema.define(version: 20151211132004) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
+    t.string   "email",                  default: "",                                                                                                              null: false
+    t.string   "encrypted_password",     default: "",                                                                                                              null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
+    t.integer  "sign_in_count",          default: 0,                                                                                                               null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.inet     "current_sign_in_ip"
@@ -251,6 +251,7 @@ ActiveRecord::Schema.define(version: 20151211132004) do
     t.string   "bio"
     t.integer  "role_id",                default: 1
     t.string   "slug"
+    t.string   "default_avatar",         default: "https://cdn4.iconfinder.com/data/icons/info-graphics-4-glyph-free/64/one_user_data_graphic_info_infos-256.png"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
