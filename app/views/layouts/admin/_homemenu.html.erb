@@ -1,12 +1,12 @@
 
   <div class="menu top-nav row">
-    <a class="navbar-brand" href="<%= root_path %>" style="color:lightblue">GEORGE RENTIS<i class="fa fa-road"></i></a>
+    <a class="navbar-brand" href="<%= root_path %>" style="color:lightblue">Lecture Organiser</a>
     <ul class="nav navbar-nav subm" >
       <li><a href="<%= root_path %>">Home</a></li>
       <li>
         <li><a href="<%= lessons_path %>">Lessons</a></li>
       </li>
-      <li><a href="<%= categories_index_path %>">Categories</a></li>
+      <li><a href="<%= categories_index_path %>">Subject Areas</a></li>
       <li><a href="<%= contact_us_path %>">Contact Us</a></li>
         <% if current_user && current_user.role_id == "admin" %>
           <li> <%= link_to "Admin Panel",admin_root_path%> </li>
