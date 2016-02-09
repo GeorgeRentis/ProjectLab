@@ -1,13 +1,13 @@
 
   <div class="menu top-nav row">
-    <a class="navbar-brand" href="<%= root_path %>" style="color:lightblue">Lecture Organiser</a>
+    <a class="navbar-brand" href="<%= root_path %>" style="color:lightblue">Home</a>
     <ul class="nav navbar-nav subm" >
-      <li><a href="<%= root_path %>">Home</a></li>
-      <li>
-        <li><a href="<%= lessons_path %>">Lessons</a></li>
+     <!--  <li><a href="<%= root_path %>">Home</a></li>
+      <li> -->
+        <li><a href="<%= lessons_path %>">eMaterial</a></li>
       </li>
       <li><a href="<%= categories_index_path %>">Subject Areas</a></li>
-      <li><a href="<%= contact_us_path %>">Contact Us</a></li>
+      <li><a href="<%= contact_us_path %>">Contact</a></li>
         <% if current_user && current_user.role_id == "admin" %>
           <li> <%= link_to "Admin Panel",admin_root_path%> </li>
         <% end %>
@@ -19,7 +19,7 @@
       <% if current_user %>
         <li><%= link_to "#{current_user.email} - Logout", destroy_user_session_path, :method => :delete %></li>
       <% else %>
-        <li><a href="<%= new_user_user_path %>">SIGN UP</a></li>
+        <!-- <li><a href="<%= new_user_user_path %>">SIGN UP</a></li> -->
         <li><a href="<%= new_user_session_path %>">SIGN IN</a></li>
       <% end %>
     </ul>
