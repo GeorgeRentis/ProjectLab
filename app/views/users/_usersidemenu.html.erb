@@ -4,11 +4,11 @@
     <ul class="list-unstyled" style="  border-top: 1px solid lightgray;  line-height: 36px;">
       <li><a href="<%= edit_user_user_path(current_user) %>" class="profile_links">Account Settings</a></li>
     </ul>
-    <h5>Manage Lessons</h5>
+<!--     <h5>Manage Lessons</h5>
     <ul class="list-unstyled" style="  border-top: 1px solid lightgray;  line-height: 36px;">
       <li><a href="<%=  user_lessons_path %>" class="profile_links">Your Lessons</a></li>
       <li><a href="<%= new_user_lesson_path %>" class="profile_links">New Lesson</a></li>
-    </ul>
+    </ul> -->
     <h5>Your Messages</h5>
     <ul class="list-unstyled" style="  border-top: 1px solid lightgray;  line-height: 36px;">
       <% if current_user.role_id == "admin" %>
