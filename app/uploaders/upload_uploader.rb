@@ -13,10 +13,10 @@ class UploadUploader < CarrierWave::Uploader::Base
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
   IMAGE_EXTENSIONS = %w(jpg jpeg gif png)
-  DOCUMENT_EXTENSIONS = %w(exe pdf doc docm docx xls rar zip)
+  DOCUMENT_EXTENSIONS = %w(exe pdf doc docm docx xls rar zip ppt txt)
   def store_dir
     
-    "#{model.uploadable_type.downcase.pluralize}/#{Lesson.find(model.uploadable_id).title
+    "#{model.uploadable_type.downcase.pluralize}/lesson_#{Lesson.find(model.uploadable_id).id
 }"
   end
   def extension_white_list

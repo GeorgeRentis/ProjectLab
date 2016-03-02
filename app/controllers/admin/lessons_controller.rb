@@ -28,6 +28,7 @@ class Admin::LessonsController < Admin::AdminController
   end
 
   def update
+    @lesson.slug = params[:lesson][:title]
     if @lesson.update(admin_lesson_params)
       flash[:success] = "Lesson Successfully edited"
       redirect_to admin_lessons_path
@@ -53,7 +54,7 @@ class Admin::LessonsController < Admin::AdminController
 
   private
   def admin_lesson_params
-    params[:lesson].permit(:title, :description,:category_id,:user_id,:level,lesson_ratings_attributes:[:id,:communication,:quality,:teaching,:general_grade,:lesson_id,:user_id,:avg,:_destroy],uploads_attributes: [:id, :upload, :_destroy],comments_attributes: [:id, :comment,:user_id,:lesson_id, :_destroy])
+    params[:lesson].permit(:title, :description,:category_id, :slug, :user_id,:level,lesson_ratings_attributes:[:id,:communication,:quality,:teaching,:general_grade,:lesson_id,:user_id,:avg,:_destroy],uploads_attributes: [:id, :upload, :_destroy],comments_attributes: [:id, :comment,:user_id,:lesson_id, :_destroy])
   end
 
   def find_lesson

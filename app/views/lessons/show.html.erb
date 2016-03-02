@@ -21,7 +21,7 @@
   </tr>
   <tr class="lesson_row">
   	<td>
-    	<strong>Level:</strong><%= @lesson.first.level %> 
+    	<strong>Cemester:</strong><%= @lesson.first.level %> 
     </td>
   </tr>
   <tr class="lesson_row">
@@ -42,7 +42,7 @@
 
    
     <% end %>
-    <tr class="lesson_row">
+<!--     <tr class="lesson_row">
       <td>
         <%= link_to "New Comment",  new_comment_path(:lesson_id => @lesson.first.id), :class => "btn btn-primary" %>
         <%= link_to "New Rating",  new_lesson_rating_path(:lesson_id => @lesson.first.id), :class => "btn btn-primary" %>
@@ -57,7 +57,7 @@
           <% end %>
       </div>
         </td>
-     </tr>
+     </tr> -->
  
    
  

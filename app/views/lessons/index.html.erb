@@ -22,8 +22,8 @@
           <tr>
             <th class="lesson_column" data-sort="string">Lesson Name</th>
             <th class="lesson_column" data-sort="string">Category Name </th>
-            <th class="lesson_column" data-sort="string">Lesson Level </th>
-            <th class="lesson_column" data-sort="int">Lesson Rating</th>
+            <th class="lesson_column" data-sort="string">Cemester </th>
+            <!-- <th class="lesson_column" data-sort="int">Lesson Rating</th> -->
             <th class="lesson_column" data-sort="string">Teacher</th>
           </tr>
         </thead>
@@ -34,7 +34,7 @@
             <td><%= link_to lesson.title,lesson_path(lesson) %></td>
             <td><%= Category.where(id: lesson.category_id).first.name %></td>
             <td><%= lesson.level %></td>
-            <% if lesson.lesson_ratings.count > 0 %>
+ <!--            <% if lesson.lesson_ratings.count > 0 %>
               <% @avg = 0 %>
               <% lesson.lesson_ratings.each do |rating| %>
                 <% @avg = @avg + rating.avg %>
@@ -42,7 +42,7 @@
               <td><%= @avg/lesson.lesson_ratings.count %></td>
             <% else %>
               <td> No Rating </td>
-            <% end %>
+            <% end %> -->
             <td><%= link_to @user.first_name  + " " + @user.last_name, show_author_lesson_path(@user)%></td>
           </tr>
         <% end %>

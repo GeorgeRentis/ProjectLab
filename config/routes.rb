@@ -38,7 +38,8 @@ Rails.application.routes.draw do
   end
   namespace :user do
     resources :lessons
-    resources :users
+    resources :users 
+
     resources :messages do
       collection do
         get :received
