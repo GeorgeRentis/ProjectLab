@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-
+root to: "homepage#index"
   get 'lesson_ratings/index'
 
   get 'lesson_ratings/new'
@@ -16,7 +16,6 @@ Rails.application.routes.draw do
   get 'users/index'
   get 'users/show'
   get 'lessons/show_author',to: 'lessons#show_author'
-  root to: "homepage#index"
   get 'contact_us', to: 'contact_messages#new'
   get 'about_us', to: 'homepage#about_us'
   get 'faq', to: 'homepage#faq'
