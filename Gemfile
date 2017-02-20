@@ -20,7 +20,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'therubyracer'
-gem 'capistrano', '~> 3.1.0'
+gem 'capistrano'
 gem 'capistrano-bundler', '~> 1.1.2'
 gem 'capistrano-rails', '~> 1.1.1'
 gem 'capistrano-rvm', github: "capistrano/rvm"
