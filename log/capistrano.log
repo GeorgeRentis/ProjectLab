@@ -2751,3 +2751,291 @@ Please ensure you restarted your application after installing Devise or setting 
 /usr/local/rvm/gems/ruby-2.4.0/bin/ruby_executable_hooks:15:in `<main>'
  DEBUG [aeeb3683] 	Tasks: TOP => environment
 (See full trace by running task with --trace)
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-02-20 05:31:44 -0500 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [4247140c] Running [ -d ~/.rvm ] as root@195.251.68.68
+ DEBUG [4247140c] Command: [ -d ~/.rvm ]
+ DEBUG [4247140c] Finished in 3.347 seconds with exit status 1 (failed).
+ DEBUG [6b1a4dff] Running [ -d /usr/local/rvm ] as root@195.251.68.68
+ DEBUG [6b1a4dff] Command: [ -d /usr/local/rvm ]
+ DEBUG [6b1a4dff] Finished in 2.568 seconds with exit status 0 (successful).
+ DEBUG [753d300f] Running /usr/local/rvm/bin/rvm version as root@195.251.68.68
+ DEBUG [753d300f] Command: /usr/local/rvm/bin/rvm version
+ DEBUG [753d300f] 	rvm 1.29.0 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io/]
+ DEBUG [753d300f] Finished in 2.512 seconds with exit status 0 (successful).
+ DEBUG [01ea5669] Running /usr/local/rvm/bin/rvm current as root@195.251.68.68
+ DEBUG [01ea5669] Command: /usr/local/rvm/bin/rvm current
+ DEBUG [01ea5669] 	ruby-2.4.0
+ DEBUG [01ea5669] Finished in 2.922 seconds with exit status 0 (successful).
+ DEBUG [61553933] Running /usr/local/rvm/bin/rvm default do ruby --version as root@195.251.68.68
+ DEBUG [61553933] Command: /usr/local/rvm/bin/rvm default do ruby --version
+ DEBUG [61553933] 	ruby 2.4.0p0 (2016-12-24 revision 57164) [x86_64-linux]
+ DEBUG [61553933] Finished in 0.325 seconds with exit status 0 (successful).
+  INFO [8db9a4dc] Running /usr/bin/env mkdir -p /tmp as root@195.251.68.68
+ DEBUG [8db9a4dc] Command: /usr/bin/env mkdir -p /tmp
+  INFO [8db9a4dc] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-ProjectLab-production-root.sh 0.0%
+  INFO Uploading /tmp/git-ssh-ProjectLab-production-root.sh 100.0%
+  INFO [b5513f24] Running /usr/bin/env chmod 700 /tmp/git-ssh-ProjectLab-production-root.sh as root@195.251.68.68
+ DEBUG [b5513f24] Command: /usr/bin/env chmod 700 /tmp/git-ssh-ProjectLab-production-root.sh
+  INFO [b5513f24] Finished in 0.007 seconds with exit status 0 (successful).
+  INFO [7a3a0be2] Running /usr/bin/env git ls-remote git@github.com:GeorgeRentis/ProjectLab.git HEAD as root@195.251.68.68
+ DEBUG [7a3a0be2] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-ProjectLab-production-root.sh" ; /usr/bin/env git ls-remote git@github.com:GeorgeRentis/ProjectLab.git HEAD )
+ DEBUG [7a3a0be2] 	Error reading response length from authentication socket.
+ DEBUG [7a3a0be2] 	356891ddea81e2aadfd974be55ea036d1e01570f	HEAD
+  INFO [7a3a0be2] Finished in 1.799 seconds with exit status 0 (successful).
+  INFO [cd6bf2c2] Running /usr/bin/env mkdir -p /var/www/ProjectLab/shared /var/www/ProjectLab/releases as root@195.251.68.68
+ DEBUG [cd6bf2c2] Command: /usr/bin/env mkdir -p /var/www/ProjectLab/shared /var/www/ProjectLab/releases
+  INFO [cd6bf2c2] Finished in 0.007 seconds with exit status 0 (successful).
+  INFO [7f9a2f3f] Running /usr/bin/env mkdir -p /var/www/ProjectLab/shared/log /var/www/ProjectLab/shared/tmp/pids /var/www/ProjectLab/shared/tmp/cache /var/www/ProjectLab/shared/tmp/sockets /var/www/ProjectLab/shared/public/system /var/www/ProjectLab/shared/public/assets as root@195.251.68.68
+ DEBUG [7f9a2f3f] Command: /usr/bin/env mkdir -p /var/www/ProjectLab/shared/log /var/www/ProjectLab/shared/tmp/pids /var/www/ProjectLab/shared/tmp/cache /var/www/ProjectLab/shared/tmp/sockets /var/www/ProjectLab/shared/public/system /var/www/ProjectLab/shared/public/assets
+  INFO [7f9a2f3f] Finished in 0.009 seconds with exit status 0 (successful).
+  INFO [685739ba] Running /usr/bin/env mkdir -p /var/www/ProjectLab/shared/config as root@195.251.68.68
+ DEBUG [685739ba] Command: /usr/bin/env mkdir -p /var/www/ProjectLab/shared/config
+  INFO [685739ba] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [2fc9e598] Running [ -f /var/www/ProjectLab/shared/config/database.yml ] as root@195.251.68.68
+ DEBUG [2fc9e598] Command: [ -f /var/www/ProjectLab/shared/config/database.yml ]
+ DEBUG [2fc9e598] Finished in 0.009 seconds with exit status 1 (failed).
+ ERROR linked file /var/www/ProjectLab/shared/config/database.yml does not exist on 195.251.68.68
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-02-20 05:33:22 -0500 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [205f4bf3] Running [ -d ~/.rvm ] as root@195.251.68.68
+ DEBUG [205f4bf3] Command: [ -d ~/.rvm ]
+ DEBUG [205f4bf3] Finished in 3.202 seconds with exit status 1 (failed).
+ DEBUG [84f4eff5] Running [ -d /usr/local/rvm ] as root@195.251.68.68
+ DEBUG [84f4eff5] Command: [ -d /usr/local/rvm ]
+ DEBUG [84f4eff5] Finished in 2.237 seconds with exit status 0 (successful).
+ DEBUG [47d5a788] Running /usr/local/rvm/bin/rvm version as root@195.251.68.68
+ DEBUG [47d5a788] Command: /usr/local/rvm/bin/rvm version
+ DEBUG [47d5a788] 	rvm 1.29.0 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io/]
+ DEBUG [47d5a788] Finished in 2.255 seconds with exit status 0 (successful).
+ DEBUG [9d8571b7] Running /usr/local/rvm/bin/rvm current as root@195.251.68.68
+ DEBUG [9d8571b7] Command: /usr/local/rvm/bin/rvm current
+ DEBUG [9d8571b7] 	ruby-2.4.0
+ DEBUG [9d8571b7] Finished in 3.117 seconds with exit status 0 (successful).
+ DEBUG [5bda210e] Running /usr/local/rvm/bin/rvm default do ruby --version as root@195.251.68.68
+ DEBUG [5bda210e] Command: /usr/local/rvm/bin/rvm default do ruby --version
+ DEBUG [5bda210e] 	ruby 2.4.0p0 (2016-12-24 revision 57164) [x86_64-linux]
+ DEBUG [5bda210e] Finished in 0.305 seconds with exit status 0 (successful).
+  INFO [9e7166c4] Running /usr/bin/env mkdir -p /tmp as root@195.251.68.68
+ DEBUG [9e7166c4] Command: /usr/bin/env mkdir -p /tmp
+  INFO [9e7166c4] Finished in 0.008 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-ProjectLab-production-root.sh 0.0%
+  INFO Uploading /tmp/git-ssh-ProjectLab-production-root.sh 100.0%
+  INFO [5d832d94] Running /usr/bin/env chmod 700 /tmp/git-ssh-ProjectLab-production-root.sh as root@195.251.68.68
+ DEBUG [5d832d94] Command: /usr/bin/env chmod 700 /tmp/git-ssh-ProjectLab-production-root.sh
+  INFO [5d832d94] Finished in 0.011 seconds with exit status 0 (successful).
+  INFO [264ef6de] Running /usr/bin/env git ls-remote git@github.com:GeorgeRentis/ProjectLab.git HEAD as root@195.251.68.68
+ DEBUG [264ef6de] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-ProjectLab-production-root.sh" ; /usr/bin/env git ls-remote git@github.com:GeorgeRentis/ProjectLab.git HEAD )
+ DEBUG [264ef6de] 	Error reading response length from authentication socket.
+ DEBUG [264ef6de] 	356891ddea81e2aadfd974be55ea036d1e01570f	HEAD
+  INFO [264ef6de] Finished in 1.779 seconds with exit status 0 (successful).
+  INFO [1f826181] Running /usr/bin/env mkdir -p /var/www/ProjectLab/shared /var/www/ProjectLab/releases as root@195.251.68.68
+ DEBUG [1f826181] Command: /usr/bin/env mkdir -p /var/www/ProjectLab/shared /var/www/ProjectLab/releases
+  INFO [1f826181] Finished in 0.012 seconds with exit status 0 (successful).
+  INFO [59b1f146] Running /usr/bin/env mkdir -p /var/www/ProjectLab/shared/log /var/www/ProjectLab/shared/tmp/pids /var/www/ProjectLab/shared/tmp/cache /var/www/ProjectLab/shared/tmp/sockets /var/www/ProjectLab/shared/public/system /var/www/ProjectLab/shared/public/assets as root@195.251.68.68
+ DEBUG [59b1f146] Command: /usr/bin/env mkdir -p /var/www/ProjectLab/shared/log /var/www/ProjectLab/shared/tmp/pids /var/www/ProjectLab/shared/tmp/cache /var/www/ProjectLab/shared/tmp/sockets /var/www/ProjectLab/shared/public/system /var/www/ProjectLab/shared/public/assets
+  INFO [59b1f146] Finished in 0.007 seconds with exit status 0 (successful).
+  INFO [dfdf4718] Running /usr/bin/env mkdir -p /var/www/ProjectLab/shared/config as root@195.251.68.68
+ DEBUG [dfdf4718] Command: /usr/bin/env mkdir -p /var/www/ProjectLab/shared/config
+  INFO [dfdf4718] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [06cabf4c] Running [ -f /var/www/ProjectLab/shared/config/database.yml ] as root@195.251.68.68
+ DEBUG [06cabf4c] Command: [ -f /var/www/ProjectLab/shared/config/database.yml ]
+ DEBUG [06cabf4c] Finished in 0.010 seconds with exit status 0 (successful).
+ DEBUG [67dc6c47] Running [ -f /var/www/ProjectLab/current/REVISION ] as root@195.251.68.68
+ DEBUG [67dc6c47] Command: [ -f /var/www/ProjectLab/current/REVISION ]
+ DEBUG [67dc6c47] Finished in 0.005 seconds with exit status 1 (failed).
+ DEBUG [1a533755] Running [ -f /var/www/ProjectLab/repo/HEAD ] as root@195.251.68.68
+ DEBUG [1a533755] Command: [ -f /var/www/ProjectLab/repo/HEAD ]
+ DEBUG [1a533755] Finished in 0.013 seconds with exit status 1 (failed).
+ DEBUG [6fdeb607] Running if test ! -d /var/www/ProjectLab; then echo "Directory does not exist '/var/www/ProjectLab'" 1>&2; false; fi as root@195.251.68.68
+ DEBUG [6fdeb607] Command: if test ! -d /var/www/ProjectLab; then echo "Directory does not exist '/var/www/ProjectLab'" 1>&2; false; fi
+ DEBUG [6fdeb607] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [62cb0eba] Running /usr/bin/env git clone --mirror git@github.com:GeorgeRentis/ProjectLab.git /var/www/ProjectLab/repo as root@195.251.68.68
+ DEBUG [62cb0eba] Command: cd /var/www/ProjectLab && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-ProjectLab-production-root.sh" ; /usr/bin/env git clone --mirror git@github.com:GeorgeRentis/ProjectLab.git /var/www/ProjectLab/repo )
+ DEBUG [62cb0eba] 	Cloning into bare repository '/var/www/ProjectLab/repo'...
+ DEBUG [62cb0eba] 	Error reading response length from authentication socket.
+  INFO [62cb0eba] Finished in 6.145 seconds with exit status 0 (successful).
+ DEBUG [48e8b9d4] Running if test ! -d /var/www/ProjectLab/repo; then echo "Directory does not exist '/var/www/ProjectLab/repo'" 1>&2; false; fi as root@195.251.68.68
+ DEBUG [48e8b9d4] Command: if test ! -d /var/www/ProjectLab/repo; then echo "Directory does not exist '/var/www/ProjectLab/repo'" 1>&2; false; fi
+ DEBUG [48e8b9d4] Finished in 0.007 seconds with exit status 0 (successful).
+  INFO [27cdb207] Running /usr/bin/env git remote set-url origin git@github.com:GeorgeRentis/ProjectLab.git as root@195.251.68.68
+ DEBUG [27cdb207] Command: cd /var/www/ProjectLab/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-ProjectLab-production-root.sh" ; /usr/bin/env git remote set-url origin git@github.com:GeorgeRentis/ProjectLab.git )
+  INFO [27cdb207] Finished in 0.007 seconds with exit status 0 (successful).
+  INFO [519cdbe9] Running /usr/bin/env git remote update --prune as root@195.251.68.68
+ DEBUG [519cdbe9] Command: cd /var/www/ProjectLab/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-ProjectLab-production-root.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [519cdbe9] 	Fetching origin
+ DEBUG [519cdbe9] 	Error reading response length from authentication socket.
+  INFO [519cdbe9] Finished in 2.920 seconds with exit status 0 (successful).
+ DEBUG [285066dc] Running if test ! -d /var/www/ProjectLab/repo; then echo "Directory does not exist '/var/www/ProjectLab/repo'" 1>&2; false; fi as root@195.251.68.68
+ DEBUG [285066dc] Command: if test ! -d /var/www/ProjectLab/repo; then echo "Directory does not exist '/var/www/ProjectLab/repo'" 1>&2; false; fi
+ DEBUG [285066dc] Finished in 0.011 seconds with exit status 0 (successful).
+  INFO [97f2c4cd] Running /usr/bin/env mkdir -p /var/www/ProjectLab/releases/20170220103335 as root@195.251.68.68
+ DEBUG [97f2c4cd] Command: cd /var/www/ProjectLab/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-ProjectLab-production-root.sh" ; /usr/bin/env mkdir -p /var/www/ProjectLab/releases/20170220103335 )
+  INFO [97f2c4cd] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [5e7070cf] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/ProjectLab/releases/20170220103335 as root@195.251.68.68
+ DEBUG [5e7070cf] Command: cd /var/www/ProjectLab/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-ProjectLab-production-root.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/ProjectLab/releases/20170220103335 )
+  INFO [5e7070cf] Finished in 0.120 seconds with exit status 0 (successful).
+ DEBUG [f57285c6] Running if test ! -d /var/www/ProjectLab/repo; then echo "Directory does not exist '/var/www/ProjectLab/repo'" 1>&2; false; fi as root@195.251.68.68
+ DEBUG [f57285c6] Command: if test ! -d /var/www/ProjectLab/repo; then echo "Directory does not exist '/var/www/ProjectLab/repo'" 1>&2; false; fi
+ DEBUG [f57285c6] Finished in 0.007 seconds with exit status 0 (successful).
+ DEBUG [161fea8b] Running /usr/bin/env git rev-list --max-count=1 master as root@195.251.68.68
+ DEBUG [161fea8b] Command: cd /var/www/ProjectLab/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-ProjectLab-production-root.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [161fea8b] 	356891ddea81e2aadfd974be55ea036d1e01570f
+ DEBUG [161fea8b] Finished in 0.007 seconds with exit status 0 (successful).
+ DEBUG [48b5ddee] Running if test ! -d /var/www/ProjectLab/releases/20170220103335; then echo "Directory does not exist '/var/www/ProjectLab/releases/20170220103335'" 1>&2; false; fi as root@195.251.68.68
+ DEBUG [48b5ddee] Command: if test ! -d /var/www/ProjectLab/releases/20170220103335; then echo "Directory does not exist '/var/www/ProjectLab/releases/20170220103335'" 1>&2; false; fi
+ DEBUG [48b5ddee] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [33395124] Running /usr/bin/env echo "356891ddea81e2aadfd974be55ea036d1e01570f" >> REVISION as root@195.251.68.68
+ DEBUG [33395124] Command: cd /var/www/ProjectLab/releases/20170220103335 && /usr/bin/env echo "356891ddea81e2aadfd974be55ea036d1e01570f" >> REVISION
+  INFO [33395124] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [5841514b] Running /usr/bin/env mkdir -p /var/www/ProjectLab/releases/20170220103335/config as root@195.251.68.68
+ DEBUG [5841514b] Command: /usr/bin/env mkdir -p /var/www/ProjectLab/releases/20170220103335/config
+  INFO [5841514b] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [08694692] Running [ -L /var/www/ProjectLab/releases/20170220103335/config/database.yml ] as root@195.251.68.68
+ DEBUG [08694692] Command: [ -L /var/www/ProjectLab/releases/20170220103335/config/database.yml ]
+ DEBUG [08694692] Finished in 0.006 seconds with exit status 1 (failed).
+ DEBUG [f7d34cfc] Running [ -f /var/www/ProjectLab/releases/20170220103335/config/database.yml ] as root@195.251.68.68
+ DEBUG [f7d34cfc] Command: [ -f /var/www/ProjectLab/releases/20170220103335/config/database.yml ]
+ DEBUG [f7d34cfc] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [96b756bd] Running /usr/bin/env rm /var/www/ProjectLab/releases/20170220103335/config/database.yml as root@195.251.68.68
+ DEBUG [96b756bd] Command: /usr/bin/env rm /var/www/ProjectLab/releases/20170220103335/config/database.yml
+  INFO [96b756bd] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [94d5c2df] Running /usr/bin/env ln -s /var/www/ProjectLab/shared/config/database.yml /var/www/ProjectLab/releases/20170220103335/config/database.yml as root@195.251.68.68
+ DEBUG [94d5c2df] Command: /usr/bin/env ln -s /var/www/ProjectLab/shared/config/database.yml /var/www/ProjectLab/releases/20170220103335/config/database.yml
+  INFO [94d5c2df] Finished in 0.008 seconds with exit status 0 (successful).
+  INFO [2e6e1b0a] Running /usr/bin/env mkdir -p /var/www/ProjectLab/releases/20170220103335 /var/www/ProjectLab/releases/20170220103335/tmp /var/www/ProjectLab/releases/20170220103335/public as root@195.251.68.68
+ DEBUG [2e6e1b0a] Command: /usr/bin/env mkdir -p /var/www/ProjectLab/releases/20170220103335 /var/www/ProjectLab/releases/20170220103335/tmp /var/www/ProjectLab/releases/20170220103335/public
+  INFO [2e6e1b0a] Finished in 0.008 seconds with exit status 0 (successful).
+ DEBUG [5b4b14f4] Running [ -L /var/www/ProjectLab/releases/20170220103335/log ] as root@195.251.68.68
+ DEBUG [5b4b14f4] Command: [ -L /var/www/ProjectLab/releases/20170220103335/log ]
+ DEBUG [5b4b14f4] Finished in 0.005 seconds with exit status 1 (failed).
+ DEBUG [e7aa60db] Running [ -d /var/www/ProjectLab/releases/20170220103335/log ] as root@195.251.68.68
+ DEBUG [e7aa60db] Command: [ -d /var/www/ProjectLab/releases/20170220103335/log ]
+ DEBUG [e7aa60db] Finished in 0.007 seconds with exit status 0 (successful).
+  INFO [0115d779] Running /usr/bin/env rm -rf /var/www/ProjectLab/releases/20170220103335/log as root@195.251.68.68
+ DEBUG [0115d779] Command: /usr/bin/env rm -rf /var/www/ProjectLab/releases/20170220103335/log
+  INFO [0115d779] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [4067fe72] Running /usr/bin/env ln -s /var/www/ProjectLab/shared/log /var/www/ProjectLab/releases/20170220103335/log as root@195.251.68.68
+ DEBUG [4067fe72] Command: /usr/bin/env ln -s /var/www/ProjectLab/shared/log /var/www/ProjectLab/releases/20170220103335/log
+  INFO [4067fe72] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [5f4dab1c] Running [ -L /var/www/ProjectLab/releases/20170220103335/tmp/pids ] as root@195.251.68.68
+ DEBUG [5f4dab1c] Command: [ -L /var/www/ProjectLab/releases/20170220103335/tmp/pids ]
+ DEBUG [5f4dab1c] Finished in 0.006 seconds with exit status 1 (failed).
+ DEBUG [b6f72062] Running [ -d /var/www/ProjectLab/releases/20170220103335/tmp/pids ] as root@195.251.68.68
+ DEBUG [b6f72062] Command: [ -d /var/www/ProjectLab/releases/20170220103335/tmp/pids ]
+ DEBUG [b6f72062] Finished in 0.005 seconds with exit status 1 (failed).
+  INFO [7aed50b8] Running /usr/bin/env ln -s /var/www/ProjectLab/shared/tmp/pids /var/www/ProjectLab/releases/20170220103335/tmp/pids as root@195.251.68.68
+ DEBUG [7aed50b8] Command: /usr/bin/env ln -s /var/www/ProjectLab/shared/tmp/pids /var/www/ProjectLab/releases/20170220103335/tmp/pids
+  INFO [7aed50b8] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [f25bb4ad] Running [ -L /var/www/ProjectLab/releases/20170220103335/tmp/cache ] as root@195.251.68.68
+ DEBUG [f25bb4ad] Command: [ -L /var/www/ProjectLab/releases/20170220103335/tmp/cache ]
+ DEBUG [f25bb4ad] Finished in 0.005 seconds with exit status 1 (failed).
+ DEBUG [d5773ad0] Running [ -d /var/www/ProjectLab/releases/20170220103335/tmp/cache ] as root@195.251.68.68
+ DEBUG [d5773ad0] Command: [ -d /var/www/ProjectLab/releases/20170220103335/tmp/cache ]
+ DEBUG [d5773ad0] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [01c81b70] Running /usr/bin/env rm -rf /var/www/ProjectLab/releases/20170220103335/tmp/cache as root@195.251.68.68
+ DEBUG [01c81b70] Command: /usr/bin/env rm -rf /var/www/ProjectLab/releases/20170220103335/tmp/cache
+  INFO [01c81b70] Finished in 0.015 seconds with exit status 0 (successful).
+  INFO [ec874428] Running /usr/bin/env ln -s /var/www/ProjectLab/shared/tmp/cache /var/www/ProjectLab/releases/20170220103335/tmp/cache as root@195.251.68.68
+ DEBUG [ec874428] Command: /usr/bin/env ln -s /var/www/ProjectLab/shared/tmp/cache /var/www/ProjectLab/releases/20170220103335/tmp/cache
+  INFO [ec874428] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [c1da4401] Running [ -L /var/www/ProjectLab/releases/20170220103335/tmp/sockets ] as root@195.251.68.68
+ DEBUG [c1da4401] Command: [ -L /var/www/ProjectLab/releases/20170220103335/tmp/sockets ]
+ DEBUG [c1da4401] Finished in 0.005 seconds with exit status 1 (failed).
+ DEBUG [39908e21] Running [ -d /var/www/ProjectLab/releases/20170220103335/tmp/sockets ] as root@195.251.68.68
+ DEBUG [39908e21] Command: [ -d /var/www/ProjectLab/releases/20170220103335/tmp/sockets ]
+ DEBUG [39908e21] Finished in 0.004 seconds with exit status 1 (failed).
+  INFO [f25cd83c] Running /usr/bin/env ln -s /var/www/ProjectLab/shared/tmp/sockets /var/www/ProjectLab/releases/20170220103335/tmp/sockets as root@195.251.68.68
+ DEBUG [f25cd83c] Command: /usr/bin/env ln -s /var/www/ProjectLab/shared/tmp/sockets /var/www/ProjectLab/releases/20170220103335/tmp/sockets
+  INFO [f25cd83c] Finished in 0.007 seconds with exit status 0 (successful).
+ DEBUG [68852a13] Running [ -L /var/www/ProjectLab/releases/20170220103335/public/system ] as root@195.251.68.68
+ DEBUG [68852a13] Command: [ -L /var/www/ProjectLab/releases/20170220103335/public/system ]
+ DEBUG [68852a13] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [90228ec9] Running [ -d /var/www/ProjectLab/releases/20170220103335/public/system ] as root@195.251.68.68
+ DEBUG [90228ec9] Command: [ -d /var/www/ProjectLab/releases/20170220103335/public/system ]
+ DEBUG [90228ec9] Finished in 0.005 seconds with exit status 1 (failed).
+  INFO [26ac4712] Running /usr/bin/env ln -s /var/www/ProjectLab/shared/public/system /var/www/ProjectLab/releases/20170220103335/public/system as root@195.251.68.68
+ DEBUG [26ac4712] Command: /usr/bin/env ln -s /var/www/ProjectLab/shared/public/system /var/www/ProjectLab/releases/20170220103335/public/system
+  INFO [26ac4712] Finished in 0.010 seconds with exit status 0 (successful).
+ DEBUG [867c911c] Running [ -L /var/www/ProjectLab/releases/20170220103335/public/assets ] as root@195.251.68.68
+ DEBUG [867c911c] Command: [ -L /var/www/ProjectLab/releases/20170220103335/public/assets ]
+ DEBUG [867c911c] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [8fb5b376] Running [ -d /var/www/ProjectLab/releases/20170220103335/public/assets ] as root@195.251.68.68
+ DEBUG [8fb5b376] Command: [ -d /var/www/ProjectLab/releases/20170220103335/public/assets ]
+ DEBUG [8fb5b376] Finished in 0.007 seconds with exit status 1 (failed).
+  INFO [897a4df2] Running /usr/bin/env ln -s /var/www/ProjectLab/shared/public/assets /var/www/ProjectLab/releases/20170220103335/public/assets as root@195.251.68.68
+ DEBUG [897a4df2] Command: /usr/bin/env ln -s /var/www/ProjectLab/shared/public/assets /var/www/ProjectLab/releases/20170220103335/public/assets
+  INFO [897a4df2] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [20bc8c2c] Running if test ! -d /var/www/ProjectLab/releases/20170220103335; then echo "Directory does not exist '/var/www/ProjectLab/releases/20170220103335'" 1>&2; false; fi as root@195.251.68.68
+ DEBUG [20bc8c2c] Command: if test ! -d /var/www/ProjectLab/releases/20170220103335; then echo "Directory does not exist '/var/www/ProjectLab/releases/20170220103335'" 1>&2; false; fi
+ DEBUG [20bc8c2c] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [3bfdc709] Running /usr/local/rvm/bin/rvm default do bundle install --path /var/www/ProjectLab/shared/bundle --without development test --deployment --quiet as root@195.251.68.68
+ DEBUG [3bfdc709] Command: cd /var/www/ProjectLab/releases/20170220103335 && /usr/local/rvm/bin/rvm default do bundle install --path /var/www/ProjectLab/shared/bundle --without development test --deployment --quiet
+ DEBUG [3bfdc709] 	Warning, new version of rvm available '1.29.1', you are using older version '1.29.0'.
+You can disable this warning with:    echo rvm_autoupdate_flag=0 >> ~/.rvmrc
+You can enable  auto-update  with:    echo rvm_autoupdate_flag=2 >> ~/.rvmrc
+  INFO [3bfdc709] Finished in 161.537 seconds with exit status 0 (successful).
+ DEBUG [00704c2c] Running if test ! -d /var/www/ProjectLab/releases/20170220103335; then echo "Directory does not exist '/var/www/ProjectLab/releases/20170220103335'" 1>&2; false; fi as root@195.251.68.68
+ DEBUG [00704c2c] Command: if test ! -d /var/www/ProjectLab/releases/20170220103335; then echo "Directory does not exist '/var/www/ProjectLab/releases/20170220103335'" 1>&2; false; fi
+ DEBUG [00704c2c] Finished in 0.019 seconds with exit status 0 (successful).
+  INFO [e6568632] Running /usr/local/rvm/bin/rvm default do bundle exec rake assets:precompile as root@195.251.68.68
+ DEBUG [e6568632] Command: cd /var/www/ProjectLab/releases/20170220103335 && ( export RAILS_ENV="production" ; /usr/local/rvm/bin/rvm default do bundle exec rake assets:precompile )
+ DEBUG [e6568632] 	/var/www/ProjectLab/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.1/lib/active_support/xml_mini.rb:51: warning: constant ::Fixnum is deprecated
+/var/www/ProjectLab/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.1/lib/active_support/xml_mini.rb:52: warning: constant ::Bignum is deprecated
+ DEBUG [e6568632] 	DEPRECATION WARNING: `config.serve_static_files` is deprecated and will be removed in Rails 5.1.
+Please use `config.public_file_server.enabled = false` instead.
+ (called from block in <top (required)> at /var/www/ProjectLab/releases/20170220103335/config/environments/production.rb:25)
+ DEBUG [e6568632] 	/var/www/ProjectLab/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.1/lib/active_support/core_ext/numeric/conversions.rb:138: warning: constant ::Fixnum is deprecated
+ DEBUG [e6568632] 	rake aborted!
+ DEBUG [e6568632] 	NoMethodError: undefined method `ENV' for main:Object
+ DEBUG [e6568632] 	/var/www/ProjectLab/releases/20170220103335/config/initializers/devise.rb:8:in `block in <top (required)>'
+/var/www/ProjectLab/shared/bundle/ruby/2.4.0/gems/devise-4.2.0/lib/devise.rb:292:in `setup'
+/var/www/ProjectLab/releases/20170220103335/config/initializers/devise.rb:3:in `<top (required)>'
+/var/www/ProjectLab/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.1/lib/active_support/dependencies.rb:287:in `load'
+/var/www/ProjectLab/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.1/lib/active_support/dependencies.rb:287:in `block in load'
+/var/www/ProjectLab/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.1/lib/active_support/dependencies.rb:259:in `load_dependency'
+/var/www/ProjectLab/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.1/lib/active_support/dependencies.rb:287:in `load'
+/var/www/ProjectLab/shared/bundle/ruby/2.4.0/gems/railties-5.0.1/lib/rails/engine.rb:648:in `block in load_config_initializer'
+/var/www/ProjectLab/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.1/lib/active_support/notifications.rb:166:in `instrument'
+/var/www/ProjectLab/shared/bundle/ruby/2.4.0/gems/railties-5.0.1/lib/rails/engine.rb:647:in `load_config_initializer'
+/var/www/ProjectLab/shared/bundle/ruby/2.4.0/gems/railties-5.0.1/lib/rails/engine.rb:612:in `block (2 levels) in <class:Engine>'
+/var/www/ProjectLab/shared/bundle/ruby/2.4.0/gems/railties-5.0.1/lib/rails/engine.rb:611:in `each'
+/var/www/ProjectLab/shared/bundle/ruby/2.4.0/gems/railties-5.0.1/lib/rails/engine.rb:611:in `block in <class:Engine>'
+/var/www/ProjectLab/shared/bundle/ruby/2.4.0/gems/railties-5.0.1/lib/rails/initializable.rb:30:in `instance_exec'
+/var/www/ProjectLab/shared/bundle/ruby/2.4.0/gems/railties-5.0.1/lib/rails/initializable.rb:30:in `run'
+/var/www/ProjectLab/shared/bundle/ruby/2.4.0/gems/railties-5.0.1/lib/rails/initializable.rb:55:in `block in run_initializers'
+/var/www/ProjectLab/shared/bundle/ruby/2.4.0/gems/railties-5.0.1/lib/rails/initializable.rb:44:in `each'
+/var/www/ProjectLab/shared/bundle/ruby/2.4.0/gems/railties-5.0.1/lib/rails/initializable.rb:44:in `tsort_each_child'
+/var/www/ProjectLab/shared/bundle/ruby/2.4.0/gems/railties-5.0.1/lib/rails/initializable.rb:54:in `run_initializers'
+/var/www/ProjectLab/shared/bundle/ruby/2.4.0/gems/railties-5.0.1/lib/rails/application.rb:352:in `initialize!'
+/var/www/ProjectLab/releases/20170220103335/config/environment.rb:5:in `<top (required)>'
+/var/www/ProjectLab/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.1/lib/active_support/dependencies.rb:293:in `require'
+/var/www/ProjectLab/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.1/lib/active_support/dependencies.rb:293:in `block in require'
+/var/www/ProjectLab/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.1/lib/active_support/dependencies.rb:259:in `load_dependency'
+/var/www/ProjectLab/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.1/lib/active_support/dependencies.rb:293:in `require'
+/var/www/ProjectLab/shared/bundle/ruby/2.4.0/gems/railties-5.0.1/lib/rails/application.rb:328:in `require_environment!'
+/var/www/ProjectLab/shared/bundle/ruby/2.4.0/gems/railties-5.0.1/lib/rails/application.rb:448:in `block in run_tasks_blocks'
+/var/www/ProjectLab/shared/bundle/ruby/2.4.0/gems/sprockets-rails-3.2.0/lib/sprockets/rails/task.rb:62:in `block (2 levels) in define'
+/var/www/ProjectLab/shared/bundle/ruby/2.4.0/gems/rake-12.0.0/exe/rake:27:in `<top (required)>'
+/usr/local/rvm/gems/ruby-2.4.0/gems/bundler-1.14.4/lib/bundler/cli/exec.rb:74:in `load'
+/usr/local/rvm/gems/ruby-2.4.0/gems/bundler-1.14.4/lib/bundler/cli/exec.rb:74:in `kernel_load'
+/usr/local/rvm/gems/ruby-2.4.0/gems/bundler-1.14.4/lib/bundler/cli/exec.rb:27:in `run'
+/usr/local/rvm/gems/ruby-2.4.0/gems/bundler-1.14.4/lib/bundler/cli.rb:335:in `exec'
+/usr/local/rvm/gems/ruby-2.4.0/gems/bundler-1.14.4/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+/usr/local/rvm/gems/ruby-2.4.0/gems/bundler-1.14.4/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+/usr/local/rvm/gems/ruby-2.4.0/gems/bundler-1.14.4/lib/bundler/vendor/thor/lib/thor.rb:359:in `dispatch'
+/usr/local/rvm/gems/ruby-2.4.0/gems/bundler-1.14.4/lib/bundler/cli.rb:20:in `dispatch'
+/usr/local/rvm/gems/ruby-2.4.0/gems/bundler-1.14.4/lib/bundler/vendor/thor/lib/thor/base.rb:440:in `start'
+/usr/local/rvm/gems/ruby-2.4.0/gems/bundler-1.14.4/lib/bundler/cli.rb:11:in `start'
+/usr/local/rvm/gems/ruby-2.4.0/gems/bundler-1.14.4/exe/bundle:32:in `block in <top (required)>'
+/usr/local/rvm/gems/ruby-2.4.0/gems/bundler-1.14.4/lib/bundler/friendly_errors.rb:121:in `with_friendly_errors'
+/usr/local/rvm/gems/ruby-2.4.0/gems/bundler-1.14.4/exe/bundle:24:in `<top (required)>'
+/usr/local/rvm/gems/ruby-2.4.0/bin/bundle:22:in `load'
+/usr/local/rvm/gems/ruby-2.4.0/bin/bundle:22:in `<main>'
+/usr/local/rvm/gems/ruby-2.4.0/bin/ruby_executable_hooks:15:in `eval'
+/usr/local/rvm/gems/ruby-2.4.0/bin/ruby_executable_hooks:15:in `<main>'
+ DEBUG [e6568632] 	Tasks: TOP => environment
+(See full trace by running task with --trace)
