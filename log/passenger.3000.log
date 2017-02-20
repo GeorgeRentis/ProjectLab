@@ -5,3 +5,24 @@
 [ 2017-02-20 06:20:35.9156 6382/7fcd553c87c0 age/Ust/UstRouterMain.cpp:529 ]: Starting Passenger UstRouter...
 [ 2017-02-20 06:20:35.9163 6382/7fcd553c87c0 age/Ust/UstRouterMain.cpp:342 ]: Passenger UstRouter online, PID 6382
 [ 2017-02-20 06:20:38.4533 6374/7f92f7fff700 age/Cor/SecurityUpdateChecker.h:464 ]: Security update check: no update found (next check in 24 hours)
+
+
+[ 2017-02-20 07:54:46.5811 6374/7f92f757d700 age/Cor/CoreMain.cpp:585 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ 2017-02-20 07:54:46.5811 6382/7fcd4ebce700 age/Ust/UstRouterMain.cpp:422 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ 2017-02-20 07:54:46.5812 6374/7f9302fcd7c0 age/Cor/CoreMain.cpp:989 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ 2017-02-20 07:54:46.5813 6382/7fcd553c87c0 age/Ust/UstRouterMain.cpp:492 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ 2017-02-20 07:54:46.5814 6382/7fcd4ebce700 Ser/Server.h:464 ]: [UstRouter] Shutdown finished
+[ 2017-02-20 07:54:46.5816 6382/7fcd4e1cd700 Ser/Server.h:817 ]: [UstRouterApiServer] Freed 0 spare client objects
+[ 2017-02-20 07:54:46.5816 6382/7fcd4e1cd700 Ser/Server.h:464 ]: [UstRouterApiServer] Shutdown finished
+[ 2017-02-20 07:54:46.5816 6374/7f92f6afb700 Ser/Server.h:817 ]: [ServerThr.3] Freed 128 spare client objects
+[ 2017-02-20 07:54:46.5817 6374/7f92f6afb700 Ser/Server.h:464 ]: [ServerThr.3] Shutdown finished
+[ 2017-02-20 07:54:46.5817 6374/7f92f56f9700 Ser/Server.h:817 ]: [ApiServer] Freed 0 spare client objects
+[ 2017-02-20 07:54:46.5817 6374/7f92f56f9700 Ser/Server.h:464 ]: [ApiServer] Shutdown finished
+[ 2017-02-20 07:54:46.5817 6374/7f92f60fa700 Ser/Server.h:817 ]: [ServerThr.4] Freed 128 spare client objects
+[ 2017-02-20 07:54:46.5818 6374/7f92f60fa700 Ser/Server.h:464 ]: [ServerThr.4] Shutdown finished
+[ 2017-02-20 07:54:46.5818 6374/7f92fd00e700 Ser/Server.h:817 ]: [ServerThr.2] Freed 128 spare client objects
+[ 2017-02-20 07:54:46.5818 6374/7f92fd00e700 Ser/Server.h:464 ]: [ServerThr.2] Shutdown finished
+[ 2017-02-20 07:54:46.5819 6374/7f92f757d700 Ser/Server.h:817 ]: [ServerThr.1] Freed 128 spare client objects
+[ 2017-02-20 07:54:46.5820 6374/7f92f757d700 Ser/Server.h:464 ]: [ServerThr.1] Shutdown finished
+[ 2017-02-20 07:54:46.5822 6382/7fcd553c87c0 age/Ust/UstRouterMain.cpp:523 ]: Passenger UstRouter shutdown finished
+[ 2017-02-20 07:54:46.6463 6374/7f9302fcd7c0 age/Cor/CoreMain.cpp:1055 ]: Passenger core shutdown finished
